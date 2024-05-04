@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #contactbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 733.5px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .studiotitle { 
+        width: 450px;        
+        margin-left: 20px;
+        margin-top: 28px;  
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+        width: 888px;
+        height: 49px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;        
+      }
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }     
+      .studio-office {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 328px; 
+        margin-top: 20px;
+        justify-content: space-between;        
+      }
+      .studiobg {
+        display: flex;
+        width: 450px;
+        height: 288px;
+        margin-left: 20px;
+        position: relative;
+        margin-right: 20px;
+      }
+      .studiobg2 {
+        display: flex;
+        width: 450px;
+        height: 288px;
+        border-radius: 12px;
+        object-fit: cover;
+        
+      }
+      .studiobg1 {
+        width: 288px;
+        height: 228px;
+        object-fit: cover;
+        position: absolute;
+        bottom: -65px;
+        left: 149px;
+      }
+      .studio-info {
+        width: 388px;
+        margin-right: 20px;
+        margin-top: 6px;
+        display: flex;
+        flex-direction: column;
+      }
+      .studio-social {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        width: 249px;
+        justify-content: space-between;        
+      }
+      .studio-social img {
+        cursor: pointer;
+      }
+      .studio-social img:hover {
+        width: 30px; 
+      }
+      .message {
+        display: flex;
+        flex-direction: row;
+        margin-top: 49px;
+        width: 828px;      
+        height: 228px;           
+        align-self: center;
+        justify-content: space-between; 
+      }
+      .fields {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .entry-field {
+        width: 415px;
+        height: 23px;
+        color: aliceblue;
+        background-color: #000000;
+        border: none;
+        padding-left: 8px;
+        margin-bottom: 3px;
+        border-radius: 3px;
+      }
+      .entry-field:focus {
+        outline: none;
+      }
+      .message-field {
+        width: 415px;
+        height: 128px;
+        color: aliceblue;
+        background-color: #000000;
+        border: none;
+        padding-left: 8px;
+        margin-bottom: 15px;
+        border-radius: 3px;
+        padding-top: 6px;      
+        font-size: 15px;
+        
+      }
+      .message-field:focus {
+        outline: none;
+      }
+      .send {
+        position: absolute;
+        bottom: -13px;
+        right: 1px;
+        font-weight: bold;
+        color: aliceblue;
+        background-color: rgb(0, 157, 255);
+        border: none;
+        border-radius: 2px;
+        height: 28px;
+        width: 55px;
+      }
+      .send:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      .message-note {
+        margin-left: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html" id="shopbutton"><button class="menubuttons">Shop</button></a>
+            <a href="contact.html">
+              <button id="contactbutton">Contact <div class="triangle"></div>
+              </button></a>                        
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="splash">
+      <div class="studio">
+        <div class="studiotitle">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;">
+            Contact <span style="color: rgb(0, 157, 255);">Us</span>
+          </div>                   
+        </div> 
+      </div>
+      <div style="
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+        margin-top: 20px;
+        align-self: center;">
+      </div> 
+      <div class="studio-office">
+        <div class="studiobg">
+          <img class="studiobg2" src="elements/custom-graphic-novel-audiobook-studio-2.webp">
+          <img class="studiobg1" src="elements/custom-graphic-novel-audiobook-studio-1.wix_mp">
+        </div>
+        <div class="studio-info">
+          <div style="
+            font-size: 28px;
+            font-weight: bold;
+            color: rgb(0, 157, 255);
+            margin-bottom: 12px;">
+            Our Studio
+          </div>
+          <div style="font-size: 15px; margin-bottom: 12px;">
+            Whether you're an artist, an author, or a business organization, 
+            we'd love to hear from you should you have any comments or questions about our works and what we do.
+          </div>
+          <div style="font-size: 15px; margin-bottom: 12px;">
+            You can speak with us on the phone once we've filtered through your inquiry to avoid Spam.            
+          </div>
+          <div style="font-size: 15px; margin-bottom: 12px;">
+            Use the Contact Form below to e-mail us! 
+          </div>
+          <div style="font-size: 15px; margin-bottom: 12px;">
+            contact@realinterfacestudios.com
+          </div>
+          <div class="studio-social">
+            <div>
+              <img src="elements/facebook.png">
+            </div>
+            <div>
+              <img src="elements/Xtwitter.png">
+            </div>
+            <div>
+              <img src="elements/youtube.png">
+            </div>
+            <div style="font-size: 28px; font-weight: bold;">Follow Us!</div>
+          </div>
+        </div>
+      </div>
+      <div class="message">
+        <div class="fields">
+          <input class="entry-field" type="text" placeholder="Name" autocomplete="new">
+          <input class="entry-field" type="email" placeholder="E-Mail Address" autocomplete="new">
+          <input class="entry-field" type="text" placeholder="Subject" autocomplete="new">
+          <textarea class="message-field" placeholder="Message" ></textarea>
+          <button class="send">SEND</button>
+        </div>
+        <div class="message-note">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;
+            color: rgb(0, 157, 255);
+            margin-top: 6px;
+            margin-bottom: 20px;">SEND MESSAGE
+          </div>
+          <div style="font-size: 12px;">If you have attachments you'd like us to view, you can send it once we've responded
+             to your initial message. Thanks!
+          </div>
+        </div>
+      </div>
+
+   
+    </div>
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>

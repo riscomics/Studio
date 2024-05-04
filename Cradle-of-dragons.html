@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #shopbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }      
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }  
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 950px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .booktitle { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;     
+        height: 78px;    
+        margin-top: 28px;  
+        align-self: center; 
+        align-items: center;
+        justify-content: space-between;
+      }
+      .cradle-of-dragons {
+        display: flex;
+        flex-direction: row;
+      }
+      .kindle {
+        display: flex;
+        flex-direction: column;     
+        margin-top: 21px;
+        margin-left: 28px;   
+        padding-bottom: 28px;
+        width: 388px;
+        align-items: center;
+      }
+      .bookcover img {
+        width: 249px;
+        margin-bottom: 12px;        
+      }
+      .buybutton {
+        font-size: 15px;
+        width: 128px;
+        font-weight: bold;
+        color: aliceblue;
+        background-color: #000000;
+        border: none;
+        padding: 4px 12px;
+        border-radius: 15px;
+      }
+      .buybutton:hover {
+        background-color: #6b1212;
+        cursor: pointer;
+      }
+      .booktext {
+        display: flex;
+        flex-direction: column;
+        width: 349px;
+        height: 388px;
+        font-size: 12px;
+        justify-content: space-between; 
+      }
+      .credits {
+        display: flex;
+        flex-direction: row;
+        width: 228px;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
+      .middle-line {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;        
+        height: 500px;
+        margin-top: 378px;
+      }
+      .audiobook {
+        display: flex;
+        flex-direction: column;     
+        margin-top: 21px;
+        margin-left: 28px;   
+        padding-bottom: 28px;
+        width: 388px;
+        align-items: center; 
+      }
+      .youtube {
+        width: 388px;
+        height: 218px;
+        margin-top: 70px;
+        margin-right: 20px;
+      }
+      .audiobooktext {
+        display: flex;
+        flex-direction: column;
+        width: 349px;
+        height: 388px;
+        font-size: 12px;
+        justify-content: space-between; 
+        margin-top: 23px;
+      }
+      .audiocredits {
+        display: flex;
+        flex-direction: row;
+        width: 288px;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html"><button id="shopbutton">SHOP 
+              <div class="triangle"></div>
+              </button></a>  
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="splash">
+      <div class="booktitle">
+        <div style="
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 5px;">
+          Cradle of Dragons 
+        </div>           
+        <div style="
+          color: rgb(0, 157, 255);
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 12px;">
+          A Massively Multiplayer Offline Fantasy Island Adventure 
+        </div>
+        <div style="
+          align-self: center;
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div>                     
+      </div> 
+      <div class="cradle-of-dragons">
+        <div class="kindle">
+            <div class="bookcover">
+              <img src="elements/cradle-of-dragons-manga-audiobook.webp">
+            </div>        
+            <div style="
+              display: flex; 
+              flex-direction: row; 
+              margin-bottom: 20px;
+              width: 265px;
+              justify-content: space-between;">
+              <a href="https://www.amazon.com/dp/B08924C5KJ"><button class="buybutton">
+                Buy Print Copy
+              </button></a> 
+              <a href="https://www.amazon.com/dp/B087YRPPXC"><button class="buybutton">
+                Read Kindle Edition
+              </button></a> 
+            </div>
+            <div class="booktext">
+              <div>SYNOPSIS:</div>
+              <div>
+                Role Playing Games are taken to a whole new level of immersion when BattleHelm, 
+                the leading developer of Augmented Reality systems, builds the world's largest theme 
+                park on a remote island in the Philippines modeled after the most popular MMO. 
+              </div>
+              <div>
+                Imagine what it's like to experience your favorite videogame in real life... 
+              </div>
+              <div>
+                Well, that's what Ryan Fontanella discovered for himself when he accepted an all-expenses-paid 
+                travel package offer to the island. 
+              </div>
+              <div>
+                But when the extremely advanced deployment of technology far exceeds his expectations, 
+                he learns that even the ultimate place of escapism can't break free from the familiarity 
+                of human nature. 
+              </div>
+              <div>
+                Enter a realm where the combination of holographic effects and animatronic beasts blur the 
+                difference between fantasy and reality. 
+              </div>
+              <div>
+                Enter... the Cradle of Dragons.
+              </div>
+              <div>
+                <div class="credits">
+                  <div>Story written by:</div>
+                  <div>Peter J. Ang</div>
+                </div>
+                <div class="credits">
+                  <div>Treatement by: </div>
+                  <div>C.B. McCullough</div>
+                </div>
+                <div class="credits">
+                  <div>Illustrations by:</div>
+                  <div>Jin Song Kim</div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="middle-line">
+            <div>OR</div>
+            <div style="margin-top: 49px; width: 1px; height: 388px; background-color: rgb(81, 82, 83);"></div>
+        </div>
+        <div class="audiobook">
+          <div class="youtube">
+            <iframe width="388" height="218" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div style="margin-top: 78px; margin-right: 20px;">
+            <a href="https://www.amazon.com/Cradle-Dragons-Massively-Multiplayer-Adventure/dp/B016QTSMGC">
+              <button class="buybutton">Listen to Audiobook</button></a> 
+          </div>
+          <div class="audiobooktext"> 
+            <div>Available only on AUDIBLE</div>
+            <div style="margin-top: 10px; margin-bottom: 12px;">
+              This Audiobook features an ensemble cast, complete with sound effects and 
+              wonderful music productions added to give the listener an enjoyable immersive experience. 
+            </div>
+            <div style="margin-bottom: 12px;">
+              Production Credits: 
+            </div>
+            <div>
+              <div class="audiocredits">
+                <div>Story & Creative Direction by:</div>
+                <div>Peter J. Ang</div>
+              </div>
+              <div class="audiocredits">
+                <div>Narrated by: </div>
+                <div>Derek Newman </div>
+              </div>
+              <div class="audiocredits">
+                <div>Illustrations by:</div>
+                <div>Jin Song Kim</div>
+              </div>
+            </div>
+            <div style="margin-top: 10px; margin-bottom: 12px;">Cast: </div>
+            <div class="audiocredits">
+              <div>Ryan Fontanella played by: </div>
+              <div>Matt Baca </div>
+            </div>
+            <div class="audiocredits">
+              <div>Dan DeBroin played by:</div>
+              <div>Chris Bacchus </div>
+            </div>
+            <div class="audiocredits">
+              <div>Miki played by: </div>
+              <div>Katrina Tortorici </div>
+            </div>
+            <div class="audiocredits">
+              <div>Selena played by:</div>
+              <div>Nicole Candian</div>
+            </div>
+            <div class="audiocredits">
+              <div>Priestess Guide played by: </div>
+              <div>Ashley Trevathan </div>
+            </div>
+            <div class="audiocredits">
+              <div>Kiira played by:</div>
+              <div>Shannon Selis  </div>
+            </div>
+            <div class="audiocredits">
+              <div>Yuuna played by: </div>
+              <div>Callyn Dorval </div>
+            </div>
+            <div class="audiocredits">
+              <div>Miranda played by:</div>
+              <div>Redd Horrocks </div>
+            </div>
+            </div>
+   
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>

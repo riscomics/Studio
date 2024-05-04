@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+
+      a {         
+        text-decoration: none;   
+        color: inherit;
+      }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #shopbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }      
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }  
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1088px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .booktitle { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;     
+        height: 49px;    
+        margin-top: 28px;  
+        align-self: center; 
+        align-items: center;
+        justify-content: space-between;
+      }
+      .jtf-3 {
+        display: flex;
+        flex-direction: column;        
+      } 
+      .middle-line {
+        display: flex; 
+        margin-top: 15px;
+        width: 1px; 
+        height: 489px; 
+        background-color: rgb(81, 82, 83);
+      }
+      .counterops-banner {
+        display: flex;
+        align-self: center; 
+        margin-top: 12px;
+        position: relative;
+      }
+      .ritsuko {
+        position: absolute;
+        top: -131px;
+        left: 15px;
+      }
+      .JTF3-manga {
+        display: flex;
+        flex-direction: row;
+        width: 788px;    
+        justify-content: space-between;
+        align-self: center;       
+      }
+      .JTF3-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;  
+      }
+      .story {
+        width: 349px;
+        font-size: 13px;
+        line-height: 18px;        
+        margin-top: 28px;
+        margin-bottom: 28px; 
+      }
+      .credits {
+        display: flex;
+        flex-direction: row;
+        width: 228px;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+      .JTF3-books {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 469px; 
+        margin-top: 28px;  
+      } 
+      .JTF3-books img {
+        object-fit: cover;                
+        width: 328px;
+      }
+      .buybutton {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        color: aliceblue;
+        background-color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 5px;
+        border-radius: 6px;
+        padding: 5px 10px;    
+      }       
+      .buybutton:hover {
+        background-color: #6b1212;
+        cursor: pointer;
+      }
+      .center-line {
+        display: flex; 
+        margin-top: 12px;
+        align-self: center;
+        width: 688px; 
+        height: 1px; 
+        background-color: rgb(81, 82, 83);
+      }
+      .review {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 688px;
+        margin-top: 28px;
+        font-size: 12px;
+        line-height: 18px;
+        padding-right: 15px;
+        padding-left: 15px;  
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html"><button id="shopbutton">SHOP 
+              <div class="triangle"></div>
+              </button></a>  
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="splash">
+      <div class="booktitle">
+        <div style="
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 0px;">
+          JTF-3
+          <span style="
+            color: rgb(0, 157, 255);
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 0px;">
+            Counter Ops
+          </span>
+        </div>
+        <div style="
+          align-self: center;
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div>                     
+      </div> 
+      <div class="jtf-3">
+        <div class="counterops-banner">
+          <img src="elements/JTF-3-counter-ops-banner.webp">
+          <div class="ritsuko">
+            <img src="elements/ritsuko.webp">
+          </div>
+        </div>
+        <div style="
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 12px;
+          margin-left: 28px;">
+          Complete Collection of the 
+            <span style="
+              color: rgb(0, 157, 255);
+              font-size: 28px;
+              font-weight: bold;
+              margin-bottom: 0px;">
+              5 issue comic book 
+            </span> 
+            mini-series!
+        </div>
+        <div class="JTF3-manga">
+          <div class="JTF3-info">
+            <div class="story">
+              <div style="margin-bottom: 12px; font-weight: bold;">STORY:</div>
+              <div style="margin-bottom: 12px;">Joint Task Force 3 is a U.N.-sanctioned 
+                group with the most elite Special Forces Operatives and Law-Enforcement officers from around the world. 
+                Attempting to thwart a terrorist organization from acquiring weapons of mass destruction, JTF-3 soon find 
+                themselves caught in a crossfire.
+              </div>
+              <div style="margin-bottom: 12px;">Can they outthink or outgun a threat to U.S. allies that may have domestic 
+                ties? A cautionary tale that may prove too close to reality to pass as fiction.</div>
+              <div style="margin-bottom: 12px;">If your style is anime Manga action, JTF-3 Counter Ops is number one with a bullet!</div>
+              <div style="margin-bottom: 12px;">134 Full-size Digitally Colored Pages of non-stop Action! </div>
+              <div class="credits">
+                <div>
+                  <div>Story written by:</div>
+                  <div>Illustrated by:</div>
+                  <div>Edited by:</div>
+                </div>
+                <div>
+                  <div>Peter J. Ang</div>
+                  <div>Jin Song Kim</div>
+                  <div>Michael Mcdonough</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="middle-line">  
+          </div>
+          <div class="JTF3-books">            
+            <img src="elements/Counter-ops-manga.webp">
+            <a href="https://www.amazon.com/JTF-3-Counter-Ops-Counter-Terrorism-Collection-ebook/dp/B00A3OGGL0">
+            <div class="buybutton">Read on Kindle</div></a>             
+          </div>
+        </div>
+        <div class="center-line"></div>
+        <div class="review">
+          <div style="font-weight: bold; margin-bottom: 12px;">
+            SequentialTart.com Reviews:
+          </div>
+          <div style="margin-bottom: 12px;">
+            "The cover is just a taste of the good art in Counter Ops. The battle is especially well drawn with 
+            hand-to-hand as well as gun fighting. And things are explained in the midst of it all which makes it 
+            seem relatively real in time instead of having to read four pages of straight dialogue then have nothing 
+            but battle.
+          </div>
+          <div style="margin-bottom: 12px;">
+            The plot as well as the order of presentation within the story are well thought-out. It is energetic with action, 
+            brains, and (of course) sexiness. This series is off to a good start!" 
+          </div>
+          <div style="text-align: right; margin-bottom: 12px;">
+            - Sheila McNeil, SequentialTart 
+          </div>
+        </div>         
+      </div> 
+    </div>
+
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>

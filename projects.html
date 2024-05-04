@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #projectsbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1328px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .studiotitle { 
+        width: 450px;        
+        margin-left: 20px;
+        margin-top: 28px;  
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+        width: 888px;
+        height: 249px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;        
+      }
+      .construck {
+        display: flex;
+        flex-direction: row;
+        width: 849px;        
+        height: 188px;          
+      }
+      .construck img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      } 
+      .construckinfo {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        font-size: 12.8px;
+        width: 388px;
+        height: 178px;
+        color: rgb(188, 201, 211);
+        margin-left: 10px;
+        margin-top: 5px;
+        line-height: 18px; 
+      }
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      } 
+      .techgeektv {
+        display: flex;
+        flex-direction: column;
+        width: 888px;
+        height: 520px; 
+        align-items: center;
+        margin-top: 28px;      
+      }
+      .techgeektitle {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        height: 49px;
+      }
+      .techgeekinfo {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        font-size: 12.8px;
+        width: 388px;
+        height: 62px;
+        color: rgb(188, 201, 211); 
+        line-height: 18px;  
+        margin-top: 10px;
+      }
+      .youtubeclips {        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+        margin-top: 10px; 
+      }
+      .youtube {
+        width: 265px;
+        height: 188px;
+        margin: auto;
+      }
+      .tera {
+        display: flex;
+        flex-direction: column;
+        width: 888px;
+        height: 450px; 
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 28px;         
+        margin-bottom: 15px;   
+      }
+      .teratitle {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        height: 49px; 
+      }
+      .teracomics {
+        display: flex;
+        flex-direction: row;   
+        align-items: center;     
+        justify-content: center;        
+      }
+      .terainfo {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        font-size: 12.8px;
+        width: 328px;
+        height: 149px;
+        color: rgb(188, 201, 211); 
+        line-height: 18px;  
+        margin-top: 10px;           
+      }
+      .terapages {
+        width: 510px;
+        height: 349px; 
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+      }
+      .terapages img {
+        width: 249px;
+        height: 349px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html"><button id="projectsbutton">Projects 
+            <div class="triangle"></div>
+            </button></a>          
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html" id="shopbutton"><button class="menubuttons">SHOP</button></a>
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="splash">
+      <div class="studio">
+        <div class="studiotitle">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;">
+            Studio <span style="color: rgb(0, 157, 255);">Projects</span>
+          </div>                   
+        </div> 
+      </div>
+      <div class="project">
+        <div style="
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div> 
+        <div style="
+          font-size: 20px;
+          font-weight: bold;">
+          Construck.<span style="color: rgb(0, 157, 255);">world</span>
+        </div>
+        <div style="
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);
+          ">
+        </div>
+        <div class="construck">
+          <img src="construck.webp">
+          <div class="construckinfo">
+            <div>
+              We are very excited on this project we've been developing for 
+              more than 3 years! 
+            </div>
+            <div>
+              It's called ConStruck.world, a new Social Network dedicated for 
+              Convention goers to socialize before, during, and after a Con! 
+            </div>
+            <div>
+              Sign up and try us out. Also support us if you can at Indiegogo!
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="techgeektv">
+        <div class="techgeektitle">
+          <div style="
+            width: 845px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);">
+          </div> 
+          <div style="
+            font-size: 20px;
+            font-weight: bold;">
+            TechGeek<span style="color: rgb(0, 157, 255);">TV</span>
+          </div>
+          <div style="
+            width: 845px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);">
+          </div>
+        </div>
+        <div class="techgeekinfo">
+          <div>A YouTube Webseries we were producing called Intuned Online TV showing the 
+            latest in Tech, Games, and Anime news.</div>
+          <div>*Pending reboot 2024*</div>                        
+        </div>
+        <div class="youtubeclips">
+          <div class="youtube">
+            <iframe width="265" height="188" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="youtube">
+            <iframe width="265" height="188" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="youtube">
+            <iframe width="265" height="188" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="youtube">
+            <iframe width="265" height="188" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="youtube">
+            <iframe width="265" height="188" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="youtube">
+            <iframe width="265" height="188" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div> 
+      <div class="tera">
+        <div class="teratitle">
+          <div style="
+            width: 845px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);">
+          </div> 
+          <div style="
+            font-size: 20px;
+            font-weight: bold;">
+            TERA<span style="color: rgb(0, 157, 255);">Graphic Novel</span>
+          </div>
+          <div style="
+            width: 845px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);">
+          </div>
+        </div>
+        <div class="teracomics">
+          <div class="terapages">
+            <img src="elements/Tera-online-graphic-novel-1.webp"> 
+            <img src="elements/Tera-online-graphic-novel-2.webp"> 
+          </div>
+          <div class="terainfo">
+            <div>Fan comic art of the action-based MMO game TERA. </div>
+            <div>Just for fun, and for possible licensing by En Masse Ent./Bluehole Studios, 
+              we decided to make this 2-page comic book spread based on the game. 
+            </div>  
+            <div>
+              It may or may not go to full scale Graphic Novel series production, 
+              but for the time being, it is just that. A tribute and a  proposal. 
+            </div>                                
+          </div>        
+        </div>
+      </div> 
+   
+    </div>
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>

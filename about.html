@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #aboutbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1288px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49);
+      }
+      .studio {
+        width: 888px;
+        height: 328px;  
+        display: flex;        
+        flex-direction: row;         
+      } 
+      .studiotitle {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        height: 388px;
+        padding-left: 20px;
+        padding-top: 28px; 
+      }
+      .studiopic {
+        width: 450px;        
+        height: 249px;        
+        margin-top: 12px;
+      }
+      .studiopic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .studioinfo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 62px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      .updates {
+        color: rgb(188, 201, 211);
+        font-size: 14.5px;
+        line-height: 17px;
+        margin-top: 15px;
+      }
+      .social {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 78px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between;
+        width: 200px;
+      }
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }
+      .midsets {
+        display: flex;
+        flex-direction: row;
+        width: 888px;
+        height: 628px; 
+        justify-content: space-between;         
+      }
+      .services {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;        
+      }
+      .servicenote {
+        display: flex;
+        flex-direction: column;
+        width: 278px;   
+      }
+      .productions {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+      }
+      .product1 {
+        width: 265px;  
+        height: 267.5px;
+        font-size: 13px;
+        line-height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(188, 201, 211);
+      }
+      .product2 {
+        margin-top: 20px;
+        width: 265px;  
+        height: 255px;
+        font-size: 13px;
+        line-height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(188, 201, 211);
+      }
+      .youtube {
+        width: 265px;
+        height: 188px;
+      }
+      .roster {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .team {
+        width: 278px;
+        display: flex;
+        flex-direction: row;
+      }
+      .member {
+        width: 88px;
+        height: 88px;
+      }
+      .member img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .memberinfo {
+        display: flex;
+        flex-direction: column;
+        width: 155px;
+        margin-left: 15px;        
+      }
+      .extra {
+        width: 888px;
+        height: 278px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .talents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 845px;
+        height: 128px;
+        margin-left: 18px;
+        margin-top: 10px;
+      }
+      .actor {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .actor img {
+        width: 88px;
+        height: 88px;
+        object-fit: cover;
+      }
+      .actorinfo {
+        display: flex;
+        flex-direction: column;
+        width: 178px;
+        height: 70px;
+        margin-left: 12px;
+        justify-content: space-between;        
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html"><button id="aboutbutton">About 
+            <div class="triangle"></div>
+            </button></a>
+            
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html" id="shopbutton"><button class="menubuttons">SHOP</button></a>
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="splash">
+      <div class="studio">
+        <div class="studiotitle">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;">
+            About Our <span style="color: rgb(0, 157, 255);">STUDIO</span>
+          </div>
+          <div style="
+            width: 278px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 10px;">
+          </div>
+          <div class="studiopic">
+            <img src="Studio-1.webp">
+          </div>
+        </div>
+        <div class="studioinfo">
+          <div class="updates">Real Interface Studios is a Digital comic book, 
+            web, and New Media production studio in north New Jersey, USA.
+          </div>
+          <div class="updates">Established back in 2003, we have since expanded 
+            from our passion to publish digital Graphic Novels to include other 
+            forms of media such as web applications and video webseries productions.
+          </div>
+          <div class="updates">Our studio is always on the lookout for potential 
+            collaborators and/or other artists who would like to join our team.
+          </div>
+          <div class="updates">Real Interface Studios also offer our skills to assist 
+            other creators and companies with any design and conversion services as well 
+            as Audiobook productions you may need. 
+          </div>
+        </div>
+      </div>
+      <div style="
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+        margin-top: 16px;
+        margin-bottom: 20px;
+        margin-left: 20px;">
+      </div>
+      <div class="midsets">
+        <div class="services">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;
+            color: rgb(0, 157, 255);
+            text-align: center;">
+            SERVICES</div>
+          <div style="
+            width: 278px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 15px;
+            margin-bottom: 20px;">
+          </div>
+          <div class="servicenote">
+            <div style="
+              font-size: 15px;
+              color: rgb(0, 157, 255);">
+              COVER ILLUSTRATIONS
+            </div>
+            <div style="
+              font-size: 13px; 
+              margin-top: 10px;
+              line-height: 18px;
+              color: rgb(188, 201, 211);">
+              If you are an author and want a beautiful cover art for your book, 
+              we have a variety of styles available ranging from Traditional Stencil, 
+              ink, Painting, manga, anime/cartoon, and more. 
+            </div>
+            <div style="
+              width: 278px;
+              height: 1px;
+              background-color: rgb(81, 82, 83);
+              margin-top: 15px;
+              margin-bottom: 20px;">
+            </div>
+          </div>
+          <div class="servicenote">
+            <div style="
+              font-size: 15px;
+              color: rgb(0, 157, 255);">
+              GRAPHIC DESIGN
+            </div>
+            <div style="
+              font-size: 13px; 
+              margin-top: 10px;
+              line-height: 18px;
+              color: rgb(188, 201, 211);">
+              We are artists experienced in years of photo editing, 
+              logo and layout designing, and everything else your business 
+              or club will need if you have a demand for highly compelling 
+              and creative visual branding. 
+            </div>
+            <div style="
+              width: 278px;
+              height: 1px;
+              background-color: rgb(81, 82, 83);
+              margin-top: 15px;
+              margin-bottom: 20px;">
+            </div>
+          </div>
+          <div class="servicenote">
+            <div style="
+              font-size: 15px;
+              color: rgb(0, 157, 255);">
+              WEB DESIGN / DEVELOPMENT
+            </div>
+            <div style="
+              font-size: 13px; 
+              margin-top: 10px;
+              line-height: 18px;
+              color: rgb(188, 201, 211);">
+              Do you like how our website looks? We can build and design gorgeous 
+              looking websites for your special interest or business. 
+              
+              Fully dynamic designs that leave a very professional impression with 
+              both desktop and mobile layout compatibility across devices. 
+            </div>
+            <div style="
+              width: 278px;
+              height: 1px;
+              background-color: rgb(81, 82, 83);
+              margin-top: 15px;
+              margin-bottom: 20px;">
+            </div>
+          </div>
+          <div class="servicenote">
+            <div style="
+              font-size: 15px;
+              color: rgb(0, 157, 255);">
+              Video Editing & Full Productions
+            </div>
+            <div style="
+              font-size: 13px; 
+              margin-top: 10px;
+              line-height: 18px;
+              color: rgb(188, 201, 211);">
+              From editing special event recordings such as wedding videos to 
+              product demo reels, our Studio can produce the perfect video 
+              presentation for you.
+            </div>
+          </div>
+        </div>
+        <div class="productions">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;
+            color: rgb(0, 157, 255);">
+            PRODUCTIONS</div>
+          <div style="
+            width: 278px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 15px;
+            margin-bottom: 20px;">
+          </div>
+          <div class="product1">
+            We offer full production services for Authors who wants to produce an awesome
+            audiobook version of their novels:
+            <div class="youtube">
+              <iframe width="265" height="188" 
+              src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+              frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
+            <div style="
+              width: 278px;
+              height: 1px;
+              background-color: rgb(81, 82, 83);">
+            </div>
+          </div>
+          <div class="product2">
+            We can produce product reels, such as new title releases and announcements. 
+            Watch the sample:
+            <div class="youtube">
+              <iframe width="265" height="188" 
+              src="https://www.youtube.com/embed/3CJ1rrth-3I?si=PeKyVRoZzF6T0I5y" 
+              frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="roster">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;
+            color: rgb(0, 157, 255);">
+            STUDIO ROSTER</div>
+          <div style="
+            width: 233px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 15px;
+            margin-bottom: 28px;">
+          </div>
+          <div class="team">
+            <div class="member">
+              <img src="Peter J.webp">
+            </div>
+            <div class="memberinfo">
+              <div style="
+                color: rgb(0, 157, 255);
+                margin-top: 5px;">
+                Peter J. Ang</div>
+              <div style="
+                color: rgb(188, 201, 211);
+                font-size: 13px;
+                margin-top: 10px;
+                line-height: 16px;">
+                Author, Designer, Devloper, Editor, Studio Creative Director.
+              </div>
+            </div>
+          </div>
+          <div style="
+            width: 233px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 28px;
+            margin-bottom: 28px;">
+          </div>
+          <div class="team">
+            <div class="member">
+              <img src="Jin.webp">
+            </div>
+            <div class="memberinfo">
+              <div style="
+                color: rgb(0, 157, 255);
+                margin-top: 5px;">
+                Jin Song Kim</div>
+              <div style="
+                color: rgb(188, 201, 211);
+                font-size: 13px;
+                margin-top: 10px;
+                line-height: 16px;">
+                Illustrator, Graphic Designer, Painter, and writer.
+              </div>
+            </div>
+          </div>
+          <div style="
+            width: 233px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 26px;
+            margin-bottom: 28px;">
+          </div>
+          <div class="team">
+            <div class="member">
+              <img src="Corey.webp">
+            </div>
+            <div class="memberinfo">
+              <div style="
+                color: rgb(0, 157, 255);
+                margin-top: 5px;">
+                C.B. McCullough</div>
+              <div style="
+                color: rgb(188, 201, 211);
+                font-size: 13px;
+                margin-top: 10px;
+                line-height: 16px;">
+                Editor, Proof-reader, and Co-writer.
+              </div>
+            </div>
+          </div>
+          <div style="
+            width: 233px;
+            height: 1px;
+            background-color: rgb(81, 82, 83);
+            margin-top: 28px;
+            margin-bottom: 28px;">
+          </div>
+          <div class="team">
+            <div class="member">
+              <img src="ian.jpg">
+            </div>
+            <div class="memberinfo">
+              <div style="
+                color: rgb(0, 157, 255);
+                margin-top: 5px;">
+                Ian Nerida Yu</div>
+              <div style="
+                color: rgb(188, 201, 211);
+                font-size: 13px;
+                margin-top: 10px;
+                line-height: 16px;">
+                Marketing specialist, Constultant, and Data Scientist.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+        margin-left: 20px;
+        margin-top: 10px;">
+      </div>
+      <div class="extra">
+        <div style="
+          font-size: 23px;
+          font-weight: bold;
+          color: rgb(0, 157, 255);
+          margin-top: 12px;
+          margin-left: 18px;">
+          TALENTS THAT WORK WITH OUR <span style="color: aliceblue;">STUDIO</span>
+        </div>
+        <div class="talents">
+          <div class="actor">
+            <img src="derek.webp">
+            <div class="actorinfo">
+              <div style="color: rgb(0, 157, 255)">Derek Newman</div>
+              <div style="font-size: 13px;">
+                Voice Talent: Narrator of our Cradle of Dragons audiobook.
+              </div>
+            </div>
+          </div> 
+          <div class="actor">
+            <img src="Callyn.webp">
+            <div class="actorinfo">
+              <div style="color: rgb(0, 157, 255)">Callyn Dorval</div>
+              <div style="font-size: 13px;">
+                Voice Talent: Narrator of our PANDORA End of Days Audiobook.
+              </div>
+            </div>
+          </div> 
+          <div class="actor">
+            <img src="Katrina.webp">
+            <div class="actorinfo">
+              <div style="color: rgb(0, 157, 255)">Katrina Tortorici</div>
+              <div style="font-size: 13px;">
+                Voice Talent: Plays "Miki" in our Cradle of Dragons Audiobook.
+              </div>
+            </div>
+          </div> 
+        </div>
+        <div class="talents">
+          <div class="actor">
+            <img src="Christopher.webp">
+            <div class="actorinfo">
+              <div style="color: rgb(0, 157, 255)">Christopher Baccus</div>
+              <div style="font-size: 13px;">
+                Voice Talent: Plays "Dan Debroin" in our Cradle of Dragons Audiobook.
+              </div>
+            </div>
+          </div> 
+          <div class="actor">
+            <img src="Shannon.webp">
+            <div class="actorinfo">
+              <div style="color: rgb(0, 157, 255)">Shannon Selis</div>
+              <div style="font-size: 13px;">
+                Voice Talent: Plays "Kiira" in our Cradle of Dragons Audiobook.
+              </div>
+            </div>
+          </div> 
+          <div class="actor">
+            <img src="Matt.webp">
+            <div class="actorinfo">
+              <div style="color: rgb(0, 157, 255)">Matt Baca</div>
+              <div style="font-size: 13px;">
+                Voice Talent: Plays "Ryan Fontanella" in our Cradle of Dragons Audiobook.
+              </div>
+            </div>
+          </div> 
+        </div>
+
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+   
+   
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #shopbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1088px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .studiotitle { 
+        width: 450px;        
+        margin-left: 20px;
+        margin-top: 28px;  
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+        width: 888px;
+        height: 49px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;        
+      }
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }    
+      .manga {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        width: 818px;
+        height: 288px;
+        margin-top: 15px;  
+        margin-bottom: 20px; 
+      }
+      .mangapic, .mangapic img {
+        height: 288px;
+        width: 328px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .mangainfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 288px;
+        width: 465px; 
+      }
+      .mangatitle {
+        font-family: helvetica;
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .mangasubtitle {
+        font-family: helvetica;
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: rgb(0, 157, 255);
+        margin-bottom: 20px;
+      }
+      .mangatext {
+        font-family: helvetica;
+        font-size: 15px;
+        margin-bottom: 8px;
+        margin-bottom: 20px;
+        width: 388px;
+      }
+      .readmore {
+        height: 28px;
+        width: 128px;
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        border-radius: 15px;
+      }
+      .readmore:hover {
+        cursor: pointer;        
+        font-weight: bold;
+        background-color: #6b1212; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html">
+              <button id="shopbutton">Shop <div class="triangle"></div>
+              </button></a>                        
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="splash">
+      <div class="studio">
+        <div class="studiotitle">
+          <div style="
+            font-size: 23px;
+            font-weight: bold;">
+            Studio <span style="color: rgb(0, 157, 255);">SHOP</span>
+          </div>                   
+        </div> 
+      </div>
+      <div class="project">
+        <div style="
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div> 
+        <div style="
+          font-size: 20px;
+          font-weight: bold;">
+          Graphic<span style="color: rgb(0, 157, 255);"> Novels</span>
+        </div>
+        <div style="
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);
+          ">
+        </div> 
+      </div>  
+      <div class="manga">
+        <div class="mangapic">
+          <img src="cradle-of-dragons-isekai-manga.webp">
+        </div>
+        <div class="mangainfo">
+          <div class="mangatitle">
+            Cradle of Dragons
+          </div>
+          <div class="mangasubtitle">
+            A Massively Multiplayer Offline Fantasy Island Adventure
+          </div>
+          <div class="mangatext">
+            Our newest Title released. Available in Kindle Format and an exciting Audiobook 
+            featuring a radio-drama style production an ensemble cast! 
+          </div>
+          <a href="Cradle-of-dragons.html"><button class="readmore">
+            READ MORE
+          </button></a>
+        </div>
+      </div>
+      <div class="manga">
+        <div style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 288px;
+          width: 378px; 
+          margin-left: 49px; ">
+          <div class="mangatitle">
+            PANDORA 
+          </div>
+          <div class="mangasubtitle">
+            End of Days
+          </div>
+          <div class="mangatext">
+            Our best-selling Zombie story graphic novel that has stayed on the Top 
+            of the Amazon Kindle Marketplace's MANGA Category for 5 years in a row! 
+          </div>
+          <a href="Pandora-end-of-days-manga.html"><button class="readmore">
+            READ MORE
+          </button></a>
+        </div>
+        <div style="
+          height: 288px;
+          width: 328px;
+          margin-right: 28px;">
+          <img style="
+          height: 288px;
+          width: 328px;
+          object-fit: cover;
+          border-radius: 12px;" src="Pandora-end-of-days-manga 1.webp">
+
+        </div>
+      </div>
+      <div class="manga">
+        <div class="mangapic">
+          <img src="counter-ops-military-action-manga.webp">
+        </div>
+        <div class="mangainfo">
+          <div class="mangatitle">
+            JTF-3
+          </div>
+          <div class="mangasubtitle">
+            COUNTER OPS
+          </div>
+          <div class="mangatext">
+            Our classic collection of 5 published comic issues of our very first works. 
+            120 pages of full color gorgeous artwork by Jin Song Kim and action-packed story telling by Peter J. Ang! 
+          </div>
+          <a href="JTF3-counter-ops-manga.html">
+            <button class="readmore">
+            READ MORE</button></a> 
+        </div>
+      </div>
+
+   
+    </div>
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>

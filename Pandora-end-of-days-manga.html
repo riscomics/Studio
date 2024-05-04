@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+
+      a {         
+        text-decoration: none;   
+        color: inherit;
+      }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #shopbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }      
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }  
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1450px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .booktitle { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;     
+        height: 49px;    
+        margin-top: 28px;  
+        align-self: center; 
+        align-items: center;
+        justify-content: space-between;
+      }
+      .pandora {
+        display: flex;
+        flex-direction: column;
+      } 
+
+      .middle-line {
+        display: flex;
+        flex-direction: column;
+        align-self: center; 
+        margin-top: 12px;
+        width: 1px; 
+        height: 1000px; 
+        background-color: rgb(81, 82, 83);
+      }
+      .pandora-banner {
+        display: flex;
+        align-self: center; 
+        margin-top: 12px;
+        position: relative;
+      }
+      .ribbon {
+        position: absolute;
+        bottom: -73px;
+        left: -25px;
+      }
+      .pandora-manga {
+        display: flex;
+        flex-direction: row;
+        width: 100%;  
+      }
+      .pandora-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+        margin-right: 15px;
+      }
+      .story {
+        width: 349px;
+        font-size: 13px;
+        line-height: 18px;
+        margin-left: 28px;
+        padding-right: 15px;
+        padding-left: 15px; 
+        margin-top: 15px;
+        margin-bottom: 28px;
+      }
+      .credits {
+        display: flex;
+        flex-direction: row;
+        width: 228px;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+      .review {
+        width: 388px;
+        font-size: 12px;
+        line-height: 18px;
+        padding-right: 15px;
+        padding-left: 15px;  
+      }
+      .pandora-books {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+      }
+      .kindle {
+        display: flex;
+        flex-direction: row;
+        margin-top: 28px;
+        margin-left: 20px;
+        margin-right: 10px;        
+        align-items: center;
+      }
+      .kindle img {
+        width: 178px;
+        object-fit: cover;
+      }
+      .language {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        color: aliceblue;
+        background-color: rgb(111, 87, 87);
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 2px 10px;        
+      }
+      .volumes {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        height: 100px; 
+        justify-content: space-between;
+      }
+      .volume-count {
+        display: flex;
+        flex-direction: row;
+        width: 100px;
+        justify-content: space-between;
+      }
+      .volume-button {
+        height: 28px; 
+        color: aliceblue;
+        background-color: #000000;
+        border-radius: 8px;
+        border: none;
+      }
+      .volume-button:hover {
+        background-color: #6b1212;
+        cursor: pointer;
+      }
+      .buybutton {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        color: aliceblue;
+        background-color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 5px;
+        border-radius: 6px;
+        padding: 5px 10px;    
+      }       
+      .buybutton:hover {
+        background-color: #6b1212;
+        cursor: pointer;
+      }
+      
+      .hardcopy {
+        display: flex;
+        flex-direction: row;
+        margin-top: 49px;
+        margin-left: 28px;
+        align-items: center;
+        justify-content: space-between;
+        width: 388px;        
+      }
+      .hardcopy img {
+        width: 228px;
+      }
+      .novel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 500px; 
+        margin-top: 49px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html"><button id="shopbutton">SHOP 
+              <div class="triangle"></div>
+              </button></a>  
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="splash">
+      <div class="booktitle">
+        <div style="
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 0px;">
+          PANDORA
+          <span style="
+            color: rgb(0, 157, 255);
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 0px;">
+            End of Days
+          </span>
+        </div>
+        <div style="
+          align-self: center;
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div>                     
+      </div> 
+      <div class="pandora">
+        <div class="pandora-banner">
+          <img src="elements/pandora-end-of-days-manga.webp">
+          <div class="ribbon">
+            <img src="elements/best-selling-manga-on-kindle.webp">
+          </div>
+        </div>
+        <div style="
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 12px;
+          margin-left: 28px;">
+          #1 Best Selling MANGA on
+            <span style="
+              color: rgb(0, 157, 255);
+              font-size: 28px;
+              font-weight: bold;
+              margin-bottom: 0px;">
+              Amazon Kindle
+            </span> 
+          5 Years in a Row!
+        </div>
+        <div class="pandora-manga">
+          <div class="pandora-info">
+            <div class="story">
+              <div style="margin-bottom: 12px; font-weight: bold;">STORY:</div>
+              <div style="margin-bottom: 12px;">The most amazing archaeological discovery of our time-- a sarcophagus 
+                from an ancient civilization that predates the Egyptian Pyramids by more than fifty thousand years--is being 
+                broadcast as a live public exhibit on national TV.</div>
+              <div style="margin-bottom: 12px;">But in their haste to reveal a glimpse of what could be the origin of mankind, 
+                the scholars of the OBARI Foundation instead unleash an ancient plague upon the modern world.</div>
+              <div style="margin-bottom: 12px;">This is the age-old story of the curious--and of those who must race to close 
+                the door on what should never have been opened.</div>
+              <div style="margin-bottom: 12px;">This is PANDORA, the End of Days... </div>
+              <div class="credits">
+                <div>
+                  <div>Story written by:</div>
+                  <div>Illustrated by:</div>
+                  <div>Edited by:</div>
+                </div>
+                <div>
+                  <div>Peter J. Ang</div>
+                  <div>Jin Song Kim</div>
+                  <div>Michael Mcdonough</div>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div style="font-weight: bold; margin-bottom: 12px;">
+                FANGORIA Reviews:
+              </div>
+              <div style="margin-bottom: 12px;">
+                "Author Peter J. Ang keeps his three subplots running at full speed, switching back and forth 
+                between the perspectives. This gives an omniscient point-of-view to the narrative and provides 
+                suspense as to how the protagonists will finally come together.
+              </div>
+              <div style="margin-bottom: 12px;">
+                The excellent artwork by Jin Song Kim captures the tension and panic. Readers should pay close attention 
+                to the distinct zombie design and transformation. PANDORA: END OF DAYS is an action-filled delight... 
+              </div>
+              <div style="text-align: right; margin-bottom: 12px;">
+                - Jorge Solis, Fangoria Magazine.
+              </div>
+            </div>         
+            <div class="review">
+              <div style="font-weight: bold; margin-bottom: 12px;">
+                FANBOYComics.Net Reviews: 
+              </div>
+              <div style="margin-bottom: 12px;">
+                "I really liked the explanation of the zombie apocalypse, which in this case isn't just a vehicle to 
+                tell stories in, it is a significant part of the story. The mystical components in particular are 
+                intriguing and something I'm looking forward to the series covering more in depth in future volumes. 
+                I really dug the art style in this book which is a blend of Japanese and American styles, using manga-like 
+                character designs and fashion but with fully detailed and, quite clearly, American set pieces. 
+              </div>
+              <div style="margin-bottom: 12px;">
+                The book has a clean art style with a ton of attention paid to the details that looks gorgeous on the page. 
+                The “zombies” in this title are not your typical shambling dead, looking more demonic in many cases than 
+                walking corpses. This design makes the undead look creepier in a way and feel a world apart from the zombies 
+                of other comic series.
+              </div>
+              <div style="margin-bottom: 12px;">
+                The series is in a black and white style shaded to make it look like a black and white movie rather than a comic. 
+                All the gray tones inserted go a long way to achieving this classic horror feel. There's just something about a zombie 
+                apocalypse that makes it look better without color." 
+              </div>
+              <div style="text-align: right; margin-bottom: 12px;">
+                - Kristine Chester, FanboyComics.net 
+              </div>
+            </div>     
+          </div>
+          <div class="middle-line">  
+          </div>
+          <div class="pandora-books">
+            <div class="kindle">
+              <img src="elements/read-manga-on-kindle.webp">
+              <div style="
+                display: flex; 
+                flex-direction: column; 
+                height: 100px; 
+                justify-content: space-between;
+                margin-left: 15px;">
+                <div class="language">English</div>
+                <div class="language">Español</div>
+                <div class="language">日本人</div>
+              </div>
+              <div class="volumes">
+                <div class="volume-count">
+                  <a href="https://www.amazon.com/dp/B00990PAQQ">
+                    <button class="volume-button">Vol. 1</button></a>
+                  <a href="https://www.amazon.com/dp/B07JJHDJBP>">
+                    <button class="volume-button">Vol. 2</button></a> 
+                </div>
+                <div class="volume-count">
+                  <a href="https://www.amazon.com/dp/B00NFPE38M">
+                    <button class="volume-button">Vol. 1</button></a> 
+                  <a href="https://www.amazon.com/dp/B07KMMQHQB">
+                    <button class="volume-button">Vol. 2</button></a> 
+                </div>
+                <div class="volume-count">
+                  <a href="https://www.amazon.com/dp/B00NLVRS0U">
+                    <button class="volume-button">Vol. 1</button></a> 
+                </div>
+              </div>
+            </div>
+            <div class="hardcopy">
+              <img src="elements/pandora-end-of-days-manga-hardcover.webp">
+              <div style="display: flex; flex-direction: column;justify-content: space-between; height: 49px; align-items: center;">
+                <div>Buy The Physical</div>
+               <a href="https://www.amazon.com/PANDORA-Zombie-Survival-Horror-Graphic-Novel/dp/1480084794">
+                <div class="buybutton">Paperback</div></a> 
+              </div>
+            </div>
+            <div class="novel">
+              <img src="elements/pandora-end-of-days-light-novel.webp">
+              <a href="https://www.amazon.com/dp/B0842BB59H">
+                <div class="buybutton">Light Novel</div></a> 
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div> 
+    </div>
+
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>
