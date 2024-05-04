@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AI Meets Art: Friend or Foe</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+
+      a {         
+        text-decoration: none;   
+        color: inherit;
+      }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #shopbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }      
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }  
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1088px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .booktitle { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;     
+        height: 49px;    
+        margin-top: 28px;  
+        align-self: center; 
+        align-items: center;
+        justify-content: space-between;
+      }
+      .AI-book {
+        display: flex;
+        flex-direction: column;        
+      } 
+      .middle-line {
+        display: flex; 
+        margin-top: 28px;
+        width: 1px; 
+        height: 489px; 
+        background-color: rgb(81, 82, 83);
+      }
+      .AI-meets-art-banner {
+        display: flex;
+        align-self: center; 
+        margin-top: 12px; 
+      }
+      .AI-meets-art-banner img {
+        width: 828px;
+      } 
+      .AI-generated-manga {
+        display: flex;
+        flex-direction: row;
+        width: 788px; 
+        height: 678px;   
+        justify-content: space-between;
+        align-self: center;      
+      }
+      .AI-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;  
+      }
+      .story {
+        width: 349px;
+        font-size: 15px;
+        line-height: 23px;        
+        margin-top: 28px;
+        margin-bottom: 28px; 
+      }
+      .credits {
+        display: flex;
+        flex-direction: row;
+        width: 228px;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+      .AI-books {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 469px; 
+        margin-top: 28px;  
+      } 
+      .AI-books img {
+        object-fit: cover;                
+        width: 388px;
+      }
+      .buybutton {
+        display: flex;
+        margin: auto;
+        justify-content: center;  
+        color: aliceblue;
+        background-color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 21px;
+        width: 188px;
+        border-radius: 6px;
+        padding: 8px 10px;    
+      }       
+      .buybutton:hover {
+        background-color: #6b1212;
+        cursor: pointer;
+      }  
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html"><button id="shopbutton">SHOP 
+              <div class="triangle"></div>
+              </button></a>  
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="splash">
+      <div class="booktitle">
+        <div style="
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 0px;">
+          AI Meets Art:
+          <span style="
+            color: rgb(0, 157, 255);
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 0px;">
+            Friend or Foe
+          </span>
+        </div>
+        <div style="
+          align-self: center;
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div>                     
+      </div> 
+      <div class="AI-book">
+        <div class="AI-meets-art-banner">
+          <img src="elements/AI-meets-art-friend-or-foe-book.jpg">
+        </div>
+    
+        <div class="AI-generated-manga">
+          <div class="AI-books">            
+            <img src="elements/AI-Book-credits.jpg">                     
+          </div>
+          <div class="middle-line">  
+          </div>
+          <div class="AI-info">
+            <div class="story">
+              <div style="margin-bottom: 12px; font-weight: bold;">DESCRIPTION:</div>
+              <div style="margin-bottom: 12px;">AI Meets ART: Friend or FOE explores the impact of 
+                Artificial Intelligence on Art, demystify common misconceptions surrounding AI 
+                technology, discuss the ethics and legality of its use as a powerful tool and 
+                debate whether AI image sampling is akin to stealing or taking inspiration.
+              </div>
+              <div style="margin-bottom: 12px;">We address the fear art communities feels towards AI, 
+                and list actual examples of how traditional artists are earning an income today by 
+                capitalizing on the imperfections of AI-generated Art.</div>
+              <div style="margin-bottom: 12px;">Lastly, AI Meets ART: Friend or FOE emphasizes how AI 
+                can be a threat to many livelihoods but may also enhance human talent and create new 
+                industries, providing a roadmap for independent studios who want to stay at the 
+                forefront of technological innovation in a rapidly-changing world.</div>
+              <div class="credits">
+                <div>
+                  <div>Story written by:</div>
+                  <div>Illustrated by:</div>
+                  <div>Edited by:</div>
+                </div>
+                <div>
+                  <div>Peter J. Ang</div>
+                  <div>Studio AI</div>
+                  <div>Corey McCulluogh</div>
+                </div>
+              </div>
+              <a href="https://www.amazon.com/AI-Meets-ART-Friend-Foe/dp/B0CMLSYRBY">
+                <div class="buybutton">Buy on AMAZON</div></a>    
+            </div>
+          </div>
+        </div>
+        <div class="center-line"></div>    
+      </div> 
+    </div>
+
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>
