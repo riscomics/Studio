@@ -163,6 +163,20 @@
         display: flex;
         flex-direction: column;
       }
+      .midlefttext1{
+        color: rgb(0, 157, 255);
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .midlefttext2{
+        color: aliceblue;
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .midcenter {
+          display: flex;
+          flex-direction: row;
+        }
       .midtext {
         display: flex;
         flex-direction: column;
@@ -271,6 +285,298 @@
         width: 888px;
         height: 100%;
       }
+    
+      @media (max-width: 700px) {
+        .header {
+          background-color: black;
+          width: 100%;
+          height: 136px;
+        }  
+        .headerbox {
+          margin: auto;
+          width: 388px;
+          height: 688px;
+          display: flex;
+          flex-direction: column;    
+        }
+          
+        .leftheader {
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+          color: aliceblue;        
+          justify-content: center;
+          text-align: center;
+          line-height: 15px;
+          position: relative;
+        }
+        .leftheader img {
+          width: 388px;
+        }
+        .headertitle {
+          width: 388px;
+          font-size: 11px;
+          margin: auto;
+        }
+        .rightheader {
+          display: flex;
+          justify-content: center;
+          z-index: 3;     
+          position: relative;
+          top: -151px;
+          left: 5px;
+        }
+        .rightheader img {
+          height: 78px;
+          margin-top: 33px;
+          margin-left: 278px;         
+        }
+        .headmenu {
+          display: flex;
+          flex-direction: row; 
+          position: absolute;
+          height: 18px;
+          width: 388px;
+          top: 159px;
+          right: 0px;
+          background-color: rgb(0, 0, 0);
+          justify-content: center; 
+          align-items: center;         
+        }
+        .menubuttons {
+          color: aliceblue;
+          background-color: black;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 12.5px;
+        }
+        .menubuttons:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        #homebutton {
+          color: aliceblue;
+          background-color: #6b1212;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 15px;
+          position: relative;
+        }
+        .triangle {
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 10px solid #6b1212;  
+              margin-left: 11.2px;
+              margin-right: 25px;
+          }
+        .splash {
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+          margin-top: 0px;
+          width: 388px;
+          height: 349px;
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+          color: aliceblue;
+          background-color: rgb(30, 49, 49); 
+        }
+        .announcements {
+          width: 350px;
+          height: 100%;          
+        }
+        .slideshow {
+          width: 388px;
+          height: 100%;          
+        }
+        .slideshow img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .updatewindow {
+          width: 320px;
+          height: 420px;
+          padding-left: 20px;
+          padding-top: 18px;
+        }
+        .updates {
+          color: aliceblue;
+          font-size: 15px;
+          margin-top: 20px;
+        }
+        .social {
+          font-size: 20px;
+          font-weight: bold;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          margin-top: 15px;
+          display: flex;
+          flex-direction: row;
+          align-items: center; 
+          justify-content: space-between;
+          width: 200px;
+        }
+        .midbar {
+          color: aliceblue;
+          background-color: #282828;
+          width: 100%;
+          height: 205px;
+          margin-top: 349px;
+          display: flex;          
+          flex-direction: column;
+          justify-content: center;      
+          align-items: center;
+        }
+        .midbox {
+          width: 388px;
+          height: 228px;
+          display: flex;         
+          flex-direction: column;           
+        }
+        .midleft {
+          width: 378px;
+          height: 78px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 12px;
+        }
+        .midlefttext1{
+          color: rgb(0, 157, 255);
+          font-size: 17px;
+          font-weight: bold;
+        }
+        .midlefttext2{
+          color: aliceblue;
+          font-size: 17px;
+          font-weight: bold;
+        }
+        .buttonlink {
+          color: aliceblue;
+          background-color: #000000;
+          font-size: 17px;
+          margin-top: 0px; 
+          padding-top: 5px;
+          padding-bottom: 3px;
+          padding-left: 15px;
+          padding-right: 17px;
+          border: none;
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+        }
+        .buttonlink:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        .midcenter {
+          display: flex;
+          flex-direction: row;
+          width: 388px;
+          height: 288px;   
+        }
+        .midtext {
+          display: flex;
+          flex-direction: column;  
+          width: 215px;
+          height: 149px;
+          font-size: 11.5px;
+          line-height: 15px;
+          justify-content: space-between;      
+          margin-right: 10px;
+        }
+        .midright {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; 
+          width: 128px;
+          height: 149px;         
+          margin-left: 15px;
+        }
+        .midrightbox {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: 36px;
+          width: 149px;
+          height: 88px;
+          background-color: rgb(131, 15, 88);
+          border-style: solid;
+          border-width: 3px;
+          border-color:#5f5f5f; 
+        }
+        .midrightbox:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        .halftriangles { 
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 155px; 
+        }
+        .halftriangle1 { 
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 17px solid #5f5f5f;    
+        }
+        .halftriangle2 { 
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 17px solid #5f5f5f;    
+        }
+        .bottomwindows {
+          margin: auto;
+          margin-top: 12px;          
+          width: 388px;
+          height: 955px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;  
+        }
+        .window {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; 
+          width: 378px;
+          height: 100%;
+          color: aliceblue; 
+        }
+        .window img {
+          object-fit: cover;
+          width: 378px;
+        }
+        .footer {          
+          display: flex; 
+          width: 100%;
+          height: 28px;
+          color: aliceblue;
+          background-color: #000000;
+        }
+        .footertext {
+          margin: auto;
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          font-size: 12px; 
+          width: 888px;
+          height: 100%;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -344,16 +650,10 @@
     <div class="midbar">
       <div class="midbox">
         <div class="midleft">
-          <div style="
-            color: rgb(0, 157, 255);
-            font-size: 32px;
-            font-weight: bold;">
+          <div class="midlefttext1">
             Digital Front
           </div>
-          <div style="
-            color: aliceblue;
-            font-size: 32px;
-            font-weight: bold;">
+          <div class="midlefttext2">
             Real Life Talent
           </div>
           <div>
@@ -362,42 +662,44 @@
             </button>
           </div>
         </div>
-        <div class="midtext">
-          <div>
-            Now offering AUDIOBOOK Production Services!
-          </div>
-          <div>
-            If you are a published Author, and would like your best work(s) 
-            produced into a captivating Audiobook, we can help! 
-          </div>
-          <div>
-            Let us turn your Novel into an exciting audio-drama complete with an 
-            ensemble cast, sound effects, and wonderful background music!
-          </div>
-        </div>
-        <div class="midright">
-          <div class="midrightbox">
-            <div style="
-              color: rgb(0, 157, 255);
-              font-size: 32px;
-              font-weight: bold;
-              font-family: verdana;">
-              SHOP
+        <div class="midcenter"> 
+          <div class="midtext">
+            <div>
+              Now offering AUDIOBOOK Production Services!
             </div>
-            <div style="
-              color: aliceblue;
-              font-size: 18px;
-              font-weight: bold;
-              font-family: helvetica;
-              text-align: center;">
-              Buy Our Stuff!            
+            <div>
+              If you are a published Author, and would like your best work(s) 
+              produced into a captivating Audiobook, we can help! 
+            </div>
+            <div>
+              Let us turn your Novel into an exciting audio-drama complete with an 
+              ensemble cast, sound effects, and wonderful background music!
             </div>
           </div>
-          <div class="halftriangles">
-            <div class="halftriangle1"></div>
-            <div class="halftriangle2"></div>
-          </div>
-        </div>        
+          <div class="midright">
+            <div class="midrightbox">
+              <div style="
+                color: rgb(0, 157, 255);
+                font-size: 32px;
+                font-weight: bold;
+                font-family: verdana;">
+                SHOP
+              </div>
+              <div style="
+                color: aliceblue;
+                font-size: 18px;
+                font-weight: bold;
+                font-family: helvetica;
+                text-align: center;">
+                Buy Our Stuff!            
+              </div>
+            </div>
+            <div class="halftriangles">
+              <div class="halftriangle1"></div>
+              <div class="halftriangle2"></div>
+            </div>
+          </div>       
+        </div> 
       </div>
     </div>
     <div class="bottomwindows">
