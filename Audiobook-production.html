@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Interface Studios LLC</title>
+    <style>
+      body {
+        background-color: #494949;
+        margin: 0;
+        overflow: hidden; 
+        overflow-y: scroll;
+        -ms-overflow-style: none;        
+      }
+      body::-webkit-scrollbar {
+            display: none;
+        }
+     
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 188px;
+      }
+      .headerbox {
+        margin: auto;
+        width: 888px;
+        height: 188px;
+        display: flex;
+        flex-direction: row;        
+      }
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 28px;
+        position: relative;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        right: 28px;
+      }
+      .rightheader img {
+        height: 217px;         
+      }
+      .headertitle {
+        padding-right: 8px;
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 430px;
+        top: 159px;
+        right: -10px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #shopbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #6b1212;  
+            margin-left: 0.2px;
+            margin-right: 25px;
+        }      
+      .footer {
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        margin: auto;
+        display: flex; 
+        align-items: center;
+        font-size: 12px; 
+        width: 888px;
+        height: 100%;
+      }  
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        margin-top: 20px;
+        width: 888px;
+        height: 1249px;
+        box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .booktitle { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;     
+        height: 78px;    
+        margin-top: 28px;  
+        align-self: center; 
+        align-items: center;
+        justify-content: space-between;
+      } 
+      .buybutton {
+        font-size: 15px;
+        width: 128px;
+        font-weight: bold;
+        color: aliceblue;
+        background-color: #000000;
+        border: none;
+        padding: 4px 12px;
+        border-radius: 15px;
+      }
+      .buybutton:hover {
+        background-color: #6b1212;
+        cursor: pointer;
+      } 
+      .audiobook {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        align-self: center;
+        align-items: center;
+        width: 828px;
+        height: 249px;  
+      }
+      .audiobook img {
+        width: 388px;
+        height: 228px;
+        object-fit: cover;
+      }
+      .audiobook-script {
+        display: flex;
+        flex-direction: column;
+        height: 212px;
+        justify-content: space-between;
+        margin-left: 15px;
+        color: aliceblue;
+        font-size: 13.5px;
+        font-weight: 500;
+        line-height: 21px;
+      }
+      .quality {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        align-self: center;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: center;
+        width: 828px;
+        height: 249px;    
+      }
+      .quality img {
+        height: 228px;
+        object-fit: cover;        
+      }
+      .quality-script {
+        display: flex;
+        flex-direction: column;
+        height: 128px;
+        justify-content: space-between;
+        margin-left: 28px;
+        color: aliceblue;
+        font-size: 13.5px;
+        font-weight: 500;
+        line-height: 21px;
+      }
+      .audiobook-production {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        align-self: center; 
+        justify-content: space-between;
+        justify-content: center;
+        width: 828px;
+        height: 249px;      
+      }
+      .complete {
+        display: flex;
+        flex-direction: row;
+        align-items: center;        
+      }
+      .complete img {
+        height: 288px;
+        object-fit: cover;  
+        margin-top: 33px;       
+      }
+      .complete-script {
+        display: flex;
+        flex-direction: column;
+        width: 288px;
+        height: 149px;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 12px;
+        margin-right: 12px;
+        color: aliceblue;
+        font-size: 13.5px;
+        font-weight: 500;
+        line-height: 21px;
+      }
+      .audiobook-sample {
+        display: flex;
+        flex-direction: column;
+        height: 228px; 
+      }
+      .youtube {
+        width: 388px;
+        height: 218px; 
+      } 
+      .audiobook-quote {
+        display: flex;
+        flex-direction: row;
+        margin-top: 28px;
+        margin-bottom: 15px;
+        margin-left: 28px;
+        justify-content: space-between; 
+        width: 728px;
+        height: 249px;            
+        position: relative;  
+      }
+      .audiobook-producer {
+        display: flex;
+        height: 288px;
+        object-fit: cover;
+        position: absolute; 
+        bottom: -16px;
+        right: -36px;
+      }
+      .quote-text {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        height: 200px;
+        justify-content: space-between; 
+        margin-top: 36px;
+        margin-left: 20px;
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerbox">
+        <div class="leftheader">
+          <div>
+            <img src="studio-logo.webp">
+          </div>
+          <div class="headertitle">
+            A New Media ART AUDIO and VIDEO Production Studio
+          </div>
+        </div>
+        <div class="rightheader">
+          <div class="">
+            <img src="samurai.webp">
+          </div>
+          <div class="headmenu"> 
+            <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
+            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html"><button id="shopbutton">SHOP 
+              <div class="triangle"></div>
+              </button></a>  
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="splash">
+      <div class="booktitle">
+        <div style="
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 5px;">
+          AUDIOBOOK 
+        </div>           
+        <div style="
+          color: rgb(0, 157, 255);
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 12px;">
+          PRODUCTION SERVICES
+        </div>
+        <div style="
+          align-self: center;
+          width: 845px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);">
+        </div>                     
+      </div> 
+      <div class="audiobook">
+        <div>
+          <img src="elements/audiobook-services.webp">
+        </div>
+        <div class="audiobook-script">
+          <div>
+            Have you thought about turning your published novel into an audiobook?
+          </div>
+          <div>
+            Don’t settle for the usual monotone read of a single narrator trying to perform all the characters in your book.
+          </div>
+          <div>
+            Your best works of fiction should come alive with an ensemble cast, complemented with sound effects and wonderful background music. Completely captivating your listener with the immersive experience of an audio-drama.
+          </div>
+        </div>
+      </div>
+
+      <div style="
+        align-self: center;
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);">
+      </div>   
+      <div class="quality">
+        <div class="quality-script">
+          <div style="
+            color: rgb(0, 157, 255);
+            font-size: 18px;
+            font-weight: bold;            
+            margin-bottom: 12px;">
+            Quality Work You Can Be Proud Of
+          </div>
+          <div>
+            At Real Interface Studios, we can produce audiobooks with your choice of narrator voice type, a cast of professional voice actors to play all your characters' dialogues, and a final mix of our own audio engineering, music composition, and creative direction. 
+          </div>
+        </div>
+        <div>
+          <img src="elements/voice-actors.webp">
+        </div>
+        
+      </div>
+
+      <div style="
+        align-self: center;
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);">
+      </div>   
+      <div class="audiobook-production">
+        <div class="complete">
+          <div>
+            <img src="elements/audiobook-quality.webp">
+          </div>
+          <div class="complete-script">
+            <div>
+              The completed product would be an audiobook that thoroughly envelops the listener with the joy of watching a blockbuster movie with their ears!
+            </div>
+            <div>
+              Not convinced yet? Just listen to these samples and hear for yourself what we can do for you.
+            </div>
+          </div>
+        </div>
+        <div class="audiobook-sample">
+          <div style="
+            color: rgb(0, 157, 255);
+            font-size: 18px;
+            font-weight: bold;            
+            margin-bottom: 12px;
+            text-align: center;">
+            Audiobook Production Sample
+          </div>
+          <div class="youtube">
+            <iframe width="388" height="218" 
+            src="https://www.youtube.com/embed/0zZq6UKAfDE?si=OVApobeh6caimcgX" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+          </div>           
+        </div>
+      </div>
+
+      <div style="
+        align-self: center;
+        width: 845px;
+        height: 1px;
+        margin-top: 10px;
+        background-color: rgb(81, 82, 83);">
+      </div>   
+
+      <div class="audiobook-quote">
+
+        <div class="quote-text">
+          <div style="
+            color: rgb(0, 157, 255);
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 128px;">
+            Let's Get It Done
+          </div>
+          <div>
+            So… if all that is to your liking, hurry and Contact Us. Your book deserves to be enjoyed on a higher platform. We’ll even help you launch your title on Audible.com and guarantee that the audiobook we produce are up to ACX quality standards.
+          </div>
+          <div>
+            Projects are worked on a first come first serve basis. Full production audiobooks can take anywhere from several weeks to a couple of months to finish. Production fees and rates are determined after an initial project assessment, per project basis.
+          </div>
+          <div>
+            <img class="audiobook-producer" src="elements/studio-girl.webp">
+          </div>
+        </div>
+
+      </div> 
+    </div>
+
+    <div class="footer">
+      <div class="footertext">Copyright© 2012 by REAL INTERFACE STUDIOS LLC</div>
+    </div>
+  </body>
+</html>
