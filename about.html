@@ -273,12 +273,253 @@
         width: 178px;
         height: 70px;
         margin-left: 12px;
-        justify-content: space-between;        
-        
+        justify-content: space-between;                
+      }
+      @media (max-width: 799px) {
+        body {
+          font-family: arial;
+        }
+        .header {
+          background-color: black;
+          width: 100%;
+          height: 136px;
+        }  
+        .headerbox { 
+          width: 388px;
+          height: 688px;
+          display: flex;
+          flex-direction: column;    
+        }          
+        .leftheader {
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+          color: aliceblue;        
+          justify-content: center;
+          text-align: center;
+          line-height: 15px;
+          position: relative;
+        }
+        .leftheader img {
+          width: 388px;
+        }
+        .headertitle {
+          width: 388px;
+          font-size: 11px;
+          margin: auto;
+        }
+        .rightheader {
+          display: flex;
+          justify-content: center;
+          z-index: 3;     
+          position: relative;
+          top: -151px;
+          left: 5px;
+        }
+        .rightheader img {
+          height: 78px;
+          margin-top: 33px;
+          margin-left: 240px;         
+        }
+        .headmenu {
+          display: flex;
+          flex-direction: row; 
+          position: absolute;
+          height: 18px;
+          width: 100%;
+          top: 159px;
+          right: 0px;
+          background-color: rgb(0, 0, 0);
+          justify-content: center; 
+          align-items: center;         
+        }
+        .menubuttons {
+          color: aliceblue;
+          background-color: black;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 12.5px;
+        }
+        .menubuttons:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        #aboutbutton {
+          color: aliceblue;
+          background-color: #6b1212;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 15px;
+          position: relative;
+        }
+        .triangle {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 10px solid #6b1212;  
+          margin-left: 11.2px;
+          margin-right: 25px;
+        }
+        .splash {
+          display: flex;
+          flex-direction: column; 
+          margin: auto; 
+          width: 100%;
+          height: 2628px;
+          box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.35);
+          color: aliceblue;
+          background-color: rgb(30, 49, 49);          
+        }
+        .studio {
+          width: 388px;
+          height: 500px;  
+          display: flex;        
+          flex-direction: column;   
+          align-self: center; 
+          justify-content: space-between;
+        } 
+        .studiotitle {
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+          padding-left: 0px;
+          height: 249px;
+          width: 388px; 
+          align-self: center; 
+          justify-content: space-between; 
+        }
+        .studiopic {
+          width: 388px;        
+          height: 200px;       
+        }
+        .studiopic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .studioinfo {
+          display: flex;
+          flex-direction: column;              
+          margin: auto;
+        }
+        .updates {
+          color: rgb(188, 201, 211);
+          font-size: 12px; 
+        }
+        .midsets {
+          display: flex;
+          flex-direction: column;
+          width: 388px;          
+          margin: auto;
+          height: 2628px; 
+          justify-content: space-between;      
+        }
+        .services {
+          display: flex;
+          flex-direction: column;
+          margin-left: 0px;          
+        }
+        .servicenote {
+          display: flex;
+          flex-direction: column;
+          width: 388px;   
+          align-self: center;
+        }
+        .productions {
+          display: flex;
+          flex-direction: column;            
+        }
+        .product1 {
+          width: 388px;  
+          height: 267.5px; 
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; 
+          color: rgb(188, 201, 211);
+        }
+        .product2 {
+          margin-top: 20px;
+          width: 388px;  
+          height: 255px; 
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; 
+          color: rgb(188, 201, 211);
+        }
+        .youtube {
+          width: 265px;
+          height: 188px;
+        }
+        .roster {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .team {
+          width: 278px;
+          display: flex;
+          flex-direction: row;
+        }
+        .member {
+          width: 88px;
+          height: 88px;
+        }
+        .member img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .memberinfo {
+          display: flex;
+          flex-direction: column;
+          width: 155px;
+          margin-left: 15px;        
+        }
+        .extra {
+          width: 888px;
+          height: 278px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .talents {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 845px;
+          height: 128px;
+          margin-left: 18px;
+          margin-top: 10px;
+        }
+        .actor {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .actor img {
+          width: 88px;
+          height: 88px;
+          object-fit: cover;
+        }
+        .actorinfo {
+          display: flex;
+          flex-direction: column;
+          width: 178px;
+          height: 70px;
+          margin-left: 12px;
+          justify-content: space-between;                
+        }
       }
     </style>
   </head>
   <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="header">
       <div class="headerbox">
         <div class="leftheader">
@@ -302,7 +543,7 @@
             <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>
             <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
             <a href="shop.html" id="shopbutton"><button class="menubuttons">SHOP</button></a>
-            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact</button></a>
           </div>
         </div>
       </div>
@@ -319,7 +560,7 @@
             width: 278px;
             height: 1px;
             background-color: rgb(81, 82, 83);
-            margin-top: 10px;">
+            margin-top: 2px;">
           </div>
           <div class="studiopic">
             <img src="Studio-1.webp">
@@ -347,7 +588,7 @@
         height: 1px;
         background-color: rgb(81, 82, 83);
         margin-top: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 23px;
         margin-left: 20px;">
       </div>
       <div class="midsets">
@@ -356,7 +597,7 @@
             font-size: 23px;
             font-weight: bold;
             color: rgb(0, 157, 255);
-            text-align: center;">
+            ">
             SERVICES</div>
           <div style="
             width: 278px;
