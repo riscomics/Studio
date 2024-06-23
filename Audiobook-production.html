@@ -80,7 +80,7 @@
         cursor: pointer;
         background-color: #6b1212;
       }
-      #shopbutton {
+      #aboutbutton {
         color: aliceblue;
         background-color: #6b1212;
         border: none;
@@ -174,6 +174,18 @@
         font-size: 13.5px;
         font-weight: 500;
         line-height: 21px;
+      }
+      .line1 {
+        align-self: center;
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+      }
+      .getdone {
+        color: rgb(0, 157, 255);
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 128px;
       }
       .quality {
         display: flex;
@@ -277,7 +289,255 @@
         line-height: 20px;
       }
       @media (max-width: 799px) {
-
+        body {
+          font-family: arial;
+        }
+        .header {
+          background-color: black;
+          width: 100%;
+          height: 136px;
+        }  
+        .headerbox { 
+          width: 388px;
+          height: 688px;
+          display: flex;
+          flex-direction: column;    
+        }          
+        .leftheader {
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+          color: aliceblue;        
+          justify-content: center;
+          text-align: center;
+          line-height: 15px;
+          position: relative;
+        }
+        .leftheader img {
+          width: 388px;
+        }
+        .headertitle {
+          width: 388px;
+          font-size: 11px;
+          margin: auto;
+        }
+        .rightheader {
+          display: flex;
+          justify-content: center;
+          z-index: 3;     
+          position: relative;
+          top: -151px;
+          left: 5px;
+        }
+        .rightheader img {
+          height: 78px;
+          margin-top: 33px;
+          margin-left: 240px;         
+        }
+        .headmenu {
+          display: flex;
+          flex-direction: row; 
+          position: absolute;
+          height: 18px;
+          width: 100%;
+          top: 159px;
+          right: 0px;
+          background-color: rgb(0, 0, 0);
+          justify-content: center; 
+          align-items: center;         
+        }
+        .menubuttons {
+          color: aliceblue;
+          background-color: black;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 12.5px;
+        }
+        .menubuttons:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        #aboutbutton {
+          color: aliceblue;
+          background-color: #6b1212;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 15px;
+          position: relative;
+        }
+        .triangle {
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 10px solid #6b1212;  
+              margin-left: 11.2px;
+              margin-right: 25px;
+          }
+        .splash {
+          display: flex;
+          flex-direction: column;  
+          margin-top: 0px;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+          color: aliceblue;
+          background-color: rgb(30, 49, 49);  
+        }
+        .booktitle { 
+          display: flex;
+          flex-direction: column;
+          width: 100%;     
+          height: 78px;    
+          margin-top: 12px;  
+          align-self: center; 
+          align-items: center;
+          justify-content: space-between;          
+        }  
+        .audiobook {
+          display: flex;
+          flex-direction: column;
+          margin-top: 15px;
+          margin-bottom: 10px;
+          align-self: center;
+          align-items: center;
+          width: 388px;
+          height: 425px;            
+        }
+        .audiobook img {
+          width: 388px;
+          height: 228px;
+          object-fit: cover;
+        }
+        .audiobook-script {
+          display: flex;
+          flex-direction: column;
+          height: 288px;
+          justify-content: space-between;
+          margin-top: 5px;
+          margin-left: 5px;
+          color: aliceblue;
+          font-size: 12.5px;
+          font-weight: 500;
+          line-height: 21px; 
+        }
+        .line1 { 
+          width: 388px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);
+        }
+        .quality {
+          display: flex;
+          flex-direction: column;
+          margin-top: 15px;  
+          justify-content: space-between; 
+          width: 388px;
+          height: 365px;       
+        }
+        .quality img {
+          height: 228px;
+          object-fit: cover;     
+        }
+        .quality-script {
+          display: flex;
+          flex-direction: column;
+          width: 388px;
+          height: 111px;
+          justify-content: space-between; 
+          margin-left: 0px;
+          color: aliceblue;
+          font-size: 13.5px;
+          font-weight: 500;
+          line-height: 21px;   
+        }
+        .audiobook-production {
+          display: flex;
+          flex-direction: column;            
+          width: 388px;
+          height: 500px;  
+          margin-bottom: 68px;
+        }
+        .complete {
+          display: flex;
+          flex-direction: row;     
+        }
+        .complete img {
+          height: 288px;
+          object-fit: cover;            
+        }
+        .complete-script {
+          display: flex;
+          flex-direction: column;
+          width: 228px;
+          height: 188px; 
+          color: aliceblue;
+          font-size: 12.5px;
+          font-weight: 500;
+          line-height: 21px;          
+        }
+        .audiobook-sample {
+          display: flex;
+          flex-direction: column;
+          height: 228px;  
+        }
+        .youtube {
+          width: 388px;
+          height: 218px;  
+        } 
+        .audiobook-quote {
+          display: flex;
+          width: 388px;
+          height: 280px;            
+          position: relative;          
+          margin-top: 20px;
+          margin-bottom: 0px;      
+        }
+        .audiobook-producer {
+          display: flex;
+          height: 288px;
+          object-fit: cover;
+          position: absolute; 
+          bottom: 0px;
+          right: -35px;        
+        }
+        .getdone { 
+          color: rgb(0, 157, 255);
+          font-size: 18px;
+          font-weight: bold;
+          width: 268px;         
+          display: flex;
+          margin-left: 0px; 
+        }
+        .quote-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 278px;
+          height: 295px; 
+          font-size: 12.5px;
+          line-height: 20px; 
+          margin-top: 0px; 
+        }
+        .footer {          
+          display: flex; 
+          width: 100%;
+          height: 28px;
+          color: aliceblue;
+          background-color: #000000;
+        }
+        .footertext {
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          font-size: 12px; 
+          width: 888px;
+          height: 100%;
+        }
       }
     </style>
   </head>
@@ -299,12 +559,12 @@
           </div>
           <div class="headmenu"> 
             <a href="index.html" id="homebutton"><button class="menubuttons">Home</button></a>
-            <a href="about.html" id="aboutbutton"><button class="menubuttons">About</button></a>
-            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
-            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
-            <a href="shop.html"><button id="shopbutton">SHOP 
+            <a href="about.html"><button id="aboutbutton">About 
               <div class="triangle"></div>
               </button></a>  
+            <a href="projects.html" id="projectsbutton"><button class="menubuttons">Projects</button></a>        
+            <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
+            <a href="shop.html" id="shopbutton"><button class="menubuttons">SHOP</button></a>              
             <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact</button></a>
           </div>
         </div>
@@ -326,11 +586,7 @@
           margin-bottom: 12px;">
           PRODUCTION SERVICES
         </div>
-        <div style="
-          align-self: center;
-          width: 845px;
-          height: 1px;
-          background-color: rgb(81, 82, 83);">
+        <div class="line1">
         </div>                     
       </div> 
       <div class="audiobook">
@@ -350,12 +606,7 @@
         </div>
       </div>
 
-      <div style="
-        align-self: center;
-        width: 845px;
-        height: 1px;
-        background-color: rgb(81, 82, 83);">
-      </div>   
+      <div class="line1"></div>   
       <div class="quality">
         <div class="quality-script">
           <div style="
@@ -374,13 +625,8 @@
         </div>
         
       </div>
-
-      <div style="
-        align-self: center;
-        width: 845px;
-        height: 1px;
-        background-color: rgb(81, 82, 83);">
-      </div>   
+      <div class="line1"></div>   
+      
       <div class="audiobook-production">
         <div class="complete">
           <div>
@@ -413,22 +659,13 @@
         </div>
       </div>
 
-      <div style="
-        align-self: center;
-        width: 845px;
-        height: 1px;
-        margin-top: 10px;
-        background-color: rgb(81, 82, 83);">
+      <div class="line1">
       </div>   
 
       <div class="audiobook-quote">
 
         <div class="quote-text">
-          <div style="
-            color: rgb(0, 157, 255);
-            font-size: 18px;
-            font-weight: bold;
-            margin-left: 128px;">
+          <div class="getdone">
             Let's Get It Done
           </div>
           <div>
