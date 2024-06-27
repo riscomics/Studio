@@ -138,7 +138,7 @@
         width: 888px;
         height: 100%;
       }    
-      .manga {
+      .manga1 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -176,6 +176,49 @@
         margin-bottom: 20px;
       }
       .mangatext {
+        font-family: helvetica;
+        font-size: 15px;
+        margin-bottom: 8px;
+        margin-bottom: 20px;
+        width: 388px;
+      }
+      .manga2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 288px;
+        width: 818px; 
+        margin-left: 49px;  
+      }
+      .mangapic2, .mangapic2 img {
+        height: 288px;
+        width: 328px;
+        margin-right: 28px; 
+        object-fit: cover;
+        border-radius: 12px;
+      } 
+      .mangainfo2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 288px;
+        width: 465px; 
+      }
+      .mangatitle2 {
+        font-family: helvetica;
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .mangasubtitle2 {
+        font-family: helvetica;
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: rgb(0, 157, 255);
+        margin-bottom: 20px;
+      }
+      .mangatext2 {
         font-family: helvetica;
         font-size: 15px;
         margin-bottom: 8px;
@@ -314,22 +357,26 @@
           align-items: center;
           align-self: center;
           justify-content: space-between;
-          margin-top: 21px;          
+          margin-top: 21px;             
         } 
         .line1 {        
           width: 388px;
           height: 1px;
           background-color: rgb(81, 82, 83);
         }
-        .manga {
+        .manga1 {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: space-between;
           align-self: center;
-          width: 818px;
-          height: 288px;
+          width: 378px;
+          height: 535px;
           margin-top: 15px;  
           margin-bottom: 10px; 
+          border-style: solid;
+          border-width: .5px;
+          border-color: #494949;
+          padding: 5px;
         }
         .mangapic, .mangapic img {
           height: 288px;
@@ -342,7 +389,7 @@
           flex-direction: column;
           justify-content: center;
           height: 288px;
-          width: 465px; 
+          width: 388px; 
         }
         .mangatitle {
           font-family: helvetica;
@@ -359,6 +406,53 @@
           margin-bottom: 20px;
         }
         .mangatext {
+          font-family: helvetica;
+          font-size: 15px;
+          margin-bottom: 8px;
+          margin-bottom: 20px;
+          width: 388px;
+        }
+        .manga2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 535px;
+          width: 378px; 
+          margin-left: 51px;            
+          border-style: solid;
+          border-width: .5px;
+          border-color: #494949;
+          padding: 5px;
+        }
+        .mangapic2, .mangapic2 img {
+          height: 288px;
+          width: 328px;
+          margin-right: 28px; 
+          object-fit: cover;
+          border-radius: 12px;
+        } 
+        .mangainfo2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 288px;
+          width: 388px; 
+        }
+        .mangatitle2 {
+          font-family: helvetica;
+          font-size: 38px;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        .mangasubtitle2 {
+          font-family: helvetica;
+          font-size: 17px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          color: rgb(0, 157, 255);
+          margin-bottom: 20px;
+        }
+        .mangatext2 {
           font-family: helvetica;
           font-size: 15px;
           margin-bottom: 8px;
@@ -394,6 +488,7 @@
           height: 100%;
         }
       }
+
     </style>
   </head>
   <body>
@@ -446,7 +541,8 @@
         <div class="line1">
         </div> 
       </div>  
-      <div class="manga">
+
+      <div class="manga1">
         <div class="mangapic">
           <img src="cradle-of-dragons-isekai-manga.webp">
         </div>
@@ -466,41 +562,29 @@
           </button></a>
         </div>
       </div>
-      <div class="manga">
-        <div style="
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          height: 288px;
-          width: 378px; 
-          margin-left: 49px; ">
-          <div class="mangatitle">
+
+      <div class="manga2">        
+        <div class="mangainfo2">
+          <div class="mangatitle2">
             PANDORA 
           </div>
-          <div class="mangasubtitle">
+          <div class="mangasubtitle2">
             End of Days
           </div>
-          <div class="mangatext">
+          <div class="mangatext2">
             Our best-selling Zombie story graphic novel that has stayed on the Top 
             of the Amazon Kindle Marketplace's MANGA Category for 5 years in a row! 
           </div>
           <a href="Pandora-end-of-days-manga.html"><button class="readmore">
             READ MORE
-          </button></a>
+          </button></a> 
         </div>
-        <div style="
-          height: 288px;
-          width: 328px;
-          margin-right: 28px;">
-          <img style="
-          height: 288px;
-          width: 328px;
-          object-fit: cover;
-          border-radius: 12px;" src="Pandora-end-of-days-manga 1.webp">
-
+        <div class="mangapic2"> 
+          <img src="Pandora-end-of-days-manga 1.webp">
         </div>
       </div>
-      <div class="manga">
+
+      <div class="manga1">
         <div class="mangapic">
           <img src="counter-ops-military-action-manga.webp">
         </div>
@@ -520,39 +604,24 @@
             READ MORE</button></a> 
         </div>
       </div>
-      <div class="manga">
-        <div style="
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          height: 288px;
-          width: 378px; 
-          margin-left: 49px; ">
-          <div class="mangatitle">
+      <div class="manga2">        
+        <div class="mangainfo2"> 
+          <div class="mangatitle2">
             AI Meets Art 
           </div>
-          <div class="mangasubtitle">
+          <div class="mangasubtitle2">
             Friend or Foe
           </div>
-          <div class="mangatext">
+          <div class="mangatext2">
             Take a deep dive with us into the world of AI and how it has quickly captivated the 
             art world's attention and learn why it's got the global community of artists so spooked?  
           </div>
           <a href="AI-meets-art.html"><button class="readmore">
             READ MORE
-          </button></a>
+          </button></a>          
         </div>
-        <div style="
-          height: 288px;
-          width: 328px;
-          margin-right: 28px;">
-          <img style="
-          height: 288px;
-          width: 328px;
-          object-fit: cover;
-          object-position: 12%;
-          border-radius: 12px;" src="elements/AI-meets-art-friend-or-foe-book.jpg">
-
+        <div class="mangapic2">
+          <img src="elements/AI-meets-art-friend-or-foe-book.jpg">
         </div>
       </div>
    
