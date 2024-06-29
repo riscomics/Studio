@@ -110,15 +110,6 @@
         margin-left: 20px;
         margin-top: 28px;  
       }
-      .project {
-        display: flex;
-        flex-direction: column;
-        width: 888px;
-        height: 49px;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 28px;        
-      }
       .footer {
         width: 100%;
         height: 28px;
@@ -247,10 +238,264 @@
       .message-note {
         margin-left: 20px;
       }
+      .line1 {
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+        margin-top: 20px;
+        align-self: center;
+      }
+      @media (max-width: 799px) {
+        body {
+          font-family: arial;
+        }
+        .header {
+          background-color: black;
+          width: 100%;
+          height: 136px;
+        }  
+        .headerbox { 
+          width: 388px;
+          height: 688px;
+          display: flex;
+          flex-direction: column;    
+        }
+          
+        .leftheader {
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+          color: aliceblue;        
+          justify-content: center;
+          text-align: center;
+          line-height: 15px;
+          position: relative;
+        }
+        .leftheader img {
+          width: 388px;
+        }
+        .headertitle {
+          width: 388px;
+          font-size: 11px;
+          margin: auto;
+        }
+        .rightheader {
+          display: flex;
+          justify-content: center;
+          z-index: 3;     
+          position: relative;
+          top: -151px;
+          left: 5px;
+        }
+        .rightheader img {
+          height: 78px;
+          margin-top: 33px;
+          margin-left: 240px;         
+        }
+        .headmenu {
+          display: flex;
+          flex-direction: row; 
+          position: absolute;
+          height: 18px;
+          width: 100%;
+          top: 159px;
+          right: 0px;
+          background-color: rgb(0, 0, 0);
+          justify-content: center; 
+          align-items: center;         
+        }
+        .menubuttons {
+          color: aliceblue;
+          background-color: black;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 12.5px;
+        }
+        .menubuttons:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        #contactbutton {
+          color: aliceblue;
+          background-color: #6b1212;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 15px;
+          position: relative;
+        }
+        .triangle {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 10px solid #6b1212;  
+          margin-left: 11.2px;
+          margin-right: 25px;
+        }
+        .splash {
+          display: flex;
+          flex-direction: column; 
+          margin: auto; 
+          width: 100%;
+          height: 100%;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+          color: aliceblue;
+          background-color: rgb(30, 49, 49); 
+        }
+        .studiotitle { 
+          display: flex;
+          width: 388px; 
+          height: 28px;         
+          margin-top: 20px; 
+          margin-bottom: 0px;
+          align-items: center;
+          align-self: center;  
+        } 
+        .studio-office {
+          display: flex;
+          flex-direction: column;
+          width: 388px;
+          height: 100%; 
+          margin-top: 20px;
+          justify-content: space-between;    
+          align-self: center;
+        }
+        .studiobg {
+          display: flex;
+          width: 388px;
+          height: 228px;
+          margin-left: 0px;
+          position: relative;
+          margin-right: 20px;
+        }
+        .studiobg2 {
+          display: flex;
+          width: 388px;
+          height: 228px;
+          border-radius: 12px;
+          object-fit: cover;          
+        }
+        .studiobg1 {
+          width: 228px;
+          height: 188px;
+          object-fit: cover;
+          position: absolute;
+          bottom: -45px;
+          left: 155px;
+        }
+        .studio-info {
+          width: 388px;
+          margin-right: 20px;
+          margin-top: 12px;
+          display: flex;
+          flex-direction: column;
+        }
+        .studio-social {
+          display: flex;
+          flex-direction: row;
+          margin-top: 20px;
+          width: 249px;
+          justify-content: space-between;        
+        }
+        .studio-social img {
+          cursor: pointer;
+        }
+        .studio-social img:hover {
+          width: 30px; 
+        }
+        .message {
+          display: flex;
+          flex-direction: column;
+          margin: 20px 20px;
+          width: 378px;      
+          height: 100%;           
+          align-self: center;
+          justify-content: space-between; 
+        }
+        .fields {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+        .entry-field {
+          width: 368px;
+          height: 23px;
+          color: aliceblue;
+          background-color: #000000;
+          border: none;
+          padding-left: 8px;
+          margin-bottom: 3px;
+          border-radius: 3px;
+        }
+        .entry-field:focus {
+          outline: none;
+        }
+        .message-field {
+          width: 368px;
+          height: 128px;
+          color: aliceblue;
+          background-color: #000000;
+          border: none;
+          padding-left: 8px;
+          margin-bottom: 15px;
+          border-radius: 3px;
+          padding-top: 6px;      
+          font-size: 15px;        
+        }
+        .message-field:focus {
+          outline: none;
+        }
+        .send {
+          position: absolute;
+          bottom: -13px;
+          right: 1px;
+          font-weight: bold;
+          color: aliceblue;
+          background-color: rgb(0, 157, 255);
+          border: none;
+          border-radius: 2px;
+          height: 28px;
+          width: 55px;
+        }
+        .send:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        .message-note {
+          margin-left: 20px;
+        }
+        .footer {          
+          display: flex; 
+          width: 100%;
+          height: 28px;
+          color: aliceblue;
+          background-color: #000000;
+        }
+        .footertext {
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          font-size: 12px; 
+          width: 388px;
+          height: 100%;
+        }
+        .line1 {
+          width: 378px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);
+          margin: 10px 10px;
+        }
+      }
 
     </style>
   </head>
   <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="header">
       <div class="headerbox">
         <div class="leftheader">
@@ -272,7 +517,7 @@
             <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
             <a href="shop.html" id="shopbutton"><button class="menubuttons">Shop</button></a>
             <a href="contact.html">
-              <button id="contactbutton">Contact <div class="triangle"></div>
+              <button id="contactbutton">Contact<div class="triangle"></div>
               </button></a>                        
             
           </div>
@@ -289,13 +534,7 @@
           </div>                   
         </div> 
       </div>
-      <div style="
-        width: 845px;
-        height: 1px;
-        background-color: rgb(81, 82, 83);
-        margin-top: 20px;
-        align-self: center;">
-      </div> 
+      <div class="line1"></div> 
       <div class="studio-office">
         <div class="studiobg">
           <img class="studiobg2" src="elements/custom-graphic-novel-audiobook-studio-2.webp">
