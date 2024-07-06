@@ -3,6 +3,7 @@
   <head>
     <title>Real Interface Studios LLC</title>
     <style>
+    
       body {
         background-color: #494949;
         margin: 0;
@@ -12,8 +13,7 @@
       }
       body::-webkit-scrollbar {
             display: none;
-        }
-     
+        }     
       .header {
         background-color: black;
         width: 100%;
@@ -245,10 +245,272 @@
         width: 249px;
         height: 349px;
         object-fit: cover;
+      }      
+      .line1 {
+        width: 845px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
       }
+    
+      @media (max-width: 799px) {
+      body {
+        font-family: arial;
+      }
+      .header {
+        background-color: black;
+        width: 100%;
+        height: 136px;
+      }  
+      .headerbox { 
+        width: 388px;
+        height: 688px;
+        display: flex;
+        flex-direction: column;    
+      }          
+      .leftheader {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;        
+        justify-content: center;
+        text-align: center;
+        line-height: 15px;
+        position: relative;
+      }
+      .leftheader img {
+        width: 388px;
+      }
+      .headertitle {
+        width: 388px;
+        font-size: 11px;
+        margin: auto;
+      }
+      .rightheader {
+        display: flex;
+        justify-content: center;
+        z-index: 3;     
+        position: relative;
+        top: -151px;
+        left: 5px;
+      }
+      .rightheader img {
+        height: 78px;
+        margin-top: 33px;
+        margin-left: 240px;         
+      }
+      .headmenu {
+        display: flex;
+        flex-direction: row; 
+        position: absolute;
+        height: 18px;
+        width: 100%;
+        top: 159px;
+        right: 0px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center; 
+        align-items: center;         
+      }
+      .menubuttons {
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 12.5px;
+      }
+      .menubuttons:hover {
+        cursor: pointer;
+        background-color: #6b1212;
+      }
+      #projectbutton {
+        color: aliceblue;
+        background-color: #6b1212;
+        border: none;
+        padding-right: 11px;
+        padding-left: 11px;        
+        height: 100%;
+        font-size: 15px;
+        position: relative;
+      }
+      .triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid #6b1212;  
+        margin-left: 11.2px;
+        margin-right: 25px;
+      }
+      .splash {
+        display: flex;
+        flex-direction: column; 
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+        color: aliceblue;
+        background-color: rgb(30, 49, 49); 
+      }
+      .studiotitle {  
+        display: flex;
+        width: 388px; 
+        height: 28px;         
+        margin-top: 20px; 
+        margin-bottom: 0px;
+        align-items: center;
+        align-self: center;  
+      }      
+      .project {
+        display: flex;
+        flex-direction: column;
+        width: 388px;
+        height: 278px;
+        justify-content: space-between; 
+        align-self: center;
+        margin-top: 10px;         
+      }
+      .construck {
+        display: flex;
+        flex-direction: column;
+        width: 378px;        
+        height: 228px;    
+      }
+      .construck img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      } 
+      .construckinfo {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        font-size: 12px;
+        width: 368px;
+        height: 178px;
+        color: rgb(188, 201, 211);
+        margin-left: 0px;
+        margin-top: 12px;
+        line-height: 15px;   
+      }
+      .techgeektv {
+        display: flex;
+        flex-direction: column;
+        width: 378px;
+        height: 100%; 
+        align-self: center;
+        margin-top: 12px;     
+      }
+      .techgeektitle {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        height: 49px;
+      }
+      .techgeekinfo {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        font-size: 12.8px;
+        width: 388px;
+        height: 62px;
+        color: rgb(188, 201, 211); 
+        line-height: 18px;  
+        margin-top: 10px;
+      }
+      .youtubeclips {        
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+        margin-top: 10px; 
+      }
+      .youtube {
+        width: 268px;
+        height: 188px;
+        margin: auto;
+      }
+      .tera {
+        display: flex;
+        flex-direction: column;
+        width: 378px;
+        height: 100%; 
+        align-self: center;
+        justify-content: space-between;
+        margin-top: 28px;         
+        margin-bottom: 15px;   
+      }
+      .teratitle {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-self: center;
+        text-align: center;
+        height: 49px; 
+      }
+      .teracomics {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;     
+        justify-content: center;     
+      }
+      .terainfo {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+        text-align: center;
+        font-size: 12px;
+        width: 328px;
+        height: 149px;
+        color: rgb(188, 201, 211); 
+        line-height: 18px;  
+        margin-top: 10px;        
+      }
+      .terapages {
+        width: 378px;
+        height: 1055px; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: space-between; 
+        margin-top: 10px;
+      }
+      .terapages img {
+        width: 378px;
+        height: 525px;
+        object-fit: cover;
+      }   
+      .footer {          
+        display: flex; 
+        width: 100%;
+        height: 28px;
+        color: aliceblue;
+        background-color: #000000;
+      }
+      .footertext {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        font-size: 12px; 
+        width: 388px;
+        height: 100%;
+      }
+      .line1 {
+        width: 378px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+        margin-bottom: 0px;
+      }
+    }
     </style>
   </head>
   <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="header">
       <div class="headerbox">
         <div class="leftheader">
@@ -271,7 +533,7 @@
             </button></a>          
             <a href="gallery.html" id="gallerybutton"><button class="menubuttons">Gallery</button></a>
             <a href="shop.html" id="shopbutton"><button class="menubuttons">SHOP</button></a>
-            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact Us</button></a>
+            <a href="contact.html" id="contactbutton"><button class="menubuttons">Contact</button></a>
           </div>
         </div>
       </div>
@@ -287,21 +549,14 @@
         </div> 
       </div>
       <div class="project">
-        <div style="
-          width: 845px;
-          height: 1px;
-          background-color: rgb(81, 82, 83);">
+        <div class="line1">
         </div> 
         <div style="
           font-size: 20px;
           font-weight: bold;">
           Construck.<span style="color: rgb(0, 157, 255);">world</span>
         </div>
-        <div style="
-          width: 845px;
-          height: 1px;
-          background-color: rgb(81, 82, 83);
-          ">
+        <div class="line1">
         </div>
         <div class="construck">
           <img src="construck.webp">
@@ -322,20 +577,14 @@
       </div> 
       <div class="techgeektv">
         <div class="techgeektitle">
-          <div style="
-            width: 845px;
-            height: 1px;
-            background-color: rgb(81, 82, 83);">
+          <div class="line1">
           </div> 
           <div style="
             font-size: 20px;
             font-weight: bold;">
             TechGeek<span style="color: rgb(0, 157, 255);">TV</span>
           </div>
-          <div style="
-            width: 845px;
-            height: 1px;
-            background-color: rgb(81, 82, 83);">
+          <div class="line1">
           </div>
         </div>
         <div class="techgeekinfo">
@@ -384,20 +633,14 @@
       </div> 
       <div class="tera">
         <div class="teratitle">
-          <div style="
-            width: 845px;
-            height: 1px;
-            background-color: rgb(81, 82, 83);">
-          </div> 
+          <div class="line1">
+          </div>
           <div style="
             font-size: 20px;
             font-weight: bold;">
             TERA<span style="color: rgb(0, 157, 255);">Graphic Novel</span>
           </div>
-          <div style="
-            width: 845px;
-            height: 1px;
-            background-color: rgb(81, 82, 83);">
+          <div class="line1">
           </div>
         </div>
         <div class="teracomics">
