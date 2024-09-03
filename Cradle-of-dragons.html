@@ -236,6 +236,13 @@
         margin-top: 78px; 
         margin-right: 20px;
       }
+      .buttons {
+        display: flex; 
+        flex-direction: row; 
+        margin-bottom: 20px;
+        width: 265px;
+        justify-content: space-between;
+      }
 
       @media (max-width: 799px) {
         body {
@@ -365,15 +372,17 @@
         justify-content: space-between; 
       }
       .cod {        
-        font-size: 21px;
+        font-size: 28px;
         font-weight: bold;
         margin-bottom: 5px;
       }
       .mmo {
         color: rgb(0, 157, 255);
-        font-size: 12px;
+        font-size: 15px;
         font-weight: bold;
         margin-bottom: 12px;
+        width: 288px;
+        text-align: center;
       }
       .line1 {
         width: 378px;
@@ -402,15 +411,24 @@
         width: 249px;
         margin-bottom: 12px;        
       }
+      .buttons {
+        display: flex; 
+        flex-direction: row; 
+        margin-bottom: 20px;
+        width: 288px;
+        justify-content: space-between;
+      }
       .buybutton {
-        font-size: 10px;
-        width: 128px;
-        height: 21px;
+        font-size: 12px;
+        width: 138px;
+        height: 23px;
         font-weight: bold;
         color: aliceblue;
         background-color: #000000;
         border: none;        
         border-radius: 15px;
+        padding: 0px;
+        
       }
       .buybutton:hover {
         background-color: #6b1212;
@@ -419,11 +437,11 @@
       .booktext {
         display: flex;
         flex-direction: column;
-        width: 328px;
-        height: 368px;
-        font-size: 10px;
-        line-height: 15px;
-        justify-content: space-between; 
+        width: 349px;
+        height: 388px;
+        font-size: 12px;
+        line-height: 16px;
+        justify-content: space-between;         
       }
       .credits {
         display: flex;
@@ -472,8 +490,8 @@
         flex-direction: column;
         width: 328px;
         height: 368px;
-        font-size: 11px;
-        line-height: 15px;
+        font-size: 12px;
+        line-height: 16px;
         justify-content: space-between; 
         margin-top: 20px; 
       }
@@ -533,12 +551,7 @@
             <div class="bookcover">
               <img src="elements/cradle-of-dragons-manga-audiobook.webp">
             </div>        
-            <div style="
-              display: flex; 
-              flex-direction: row; 
-              margin-bottom: 20px;
-              width: 265px;
-              justify-content: space-between;">
+            <div class="buttons">
               <a href="https://www.amazon.com/dp/B08924C5KJ"><button class="buybutton">
                 Buy Print Copy
               </button></a> 
