@@ -229,11 +229,285 @@
         padding-right: 15px;
         padding-left: 15px;  
       }
+      .collection {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 12px;
+        margin-left: 28px;
+      }
+      .comics {
+        color: rgb(0, 157, 255);
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      .line1 {
+        align-self: center;
+        width: 828px;
+        height: 1px;
+        background-color: rgb(81, 82, 83);
+      }
+      
+
+      @media (max-width: 799px) {
+        body {
+          font-family: arial;
+        }
+        .header {
+          background-color: black;
+          width: 100%;
+          height: 136px;
+        }  
+        .headerbox { 
+          width: 388px;
+          height: 688px;
+          display: flex;
+          flex-direction: column;    
+        }
+          
+        .leftheader {
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+          color: aliceblue;        
+          justify-content: center;
+          text-align: center;
+          line-height: 15px;
+          position: relative;
+        }
+        .leftheader img {
+          width: 388px;
+        }
+        .headertitle {
+          width: 388px;
+          font-size: 11px;
+          margin: auto;
+        }
+        .rightheader {
+          display: flex;
+          justify-content: center;
+          z-index: 3;     
+          position: relative;
+          top: -151px;
+          left: 5px;
+        }
+        .rightheader img {
+          height: 78px;
+          margin-top: 33px;
+          margin-left: 240px;         
+        }
+        .headmenu {
+          display: flex;
+          flex-direction: row; 
+          position: absolute;
+          height: 18px;
+          width: 100%;
+          top: 159px;
+          right: 0px;
+          background-color: rgb(0, 0, 0);
+          justify-content: center; 
+          align-items: center;         
+        }
+        .menubuttons {
+          color: aliceblue;
+          background-color: black;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 12.5px;
+        }
+        .menubuttons:hover {
+          cursor: pointer;
+          background-color: #6b1212;
+        }
+        #shopbutton {
+          color: aliceblue;
+          background-color: #6b1212;
+          border: none;
+          padding-right: 11px;
+          padding-left: 11px;        
+          height: 100%;
+          font-size: 15px;
+          position: relative;
+        }
+        .triangle {
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 10px solid #6b1212;  
+              margin-left: 11.2px;
+              margin-right: 25px;
+          }
+        .footer {          
+          display: flex; 
+          width: 100%;
+          height: 28px;
+          color: aliceblue;
+          background-color: #000000;
+        }
+        .footertext {
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          font-size: 12px; 
+          width: 368px;
+          height: 100%;
+        }        
+        .splash {
+          display: flex;
+          flex-direction: column; 
+          margin-top: 0px;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+          color: aliceblue;
+          background-color: rgb(30, 49, 49);  
+        } 
+        .line1 {
+          align-self: center;
+          width: 328px;
+          height: 1px;
+          background-color: rgb(81, 82, 83);
+        }
+        .booktitle { 
+          display: flex;
+          flex-direction: column;
+          width: 328px;     
+          height: 38px;    
+          margin-top: 20px;  
+          align-self: center; 
+          align-items: center;
+          justify-content: space-between; 
+        }
+        .jtf-3 {
+          display: flex;
+          flex-direction: column;     
+          width: 378px;
+          align-self: center;
+        } 
+        .middle-line {
+          display: flex; 
+          margin-top: 0px;
+          width: 0px; 
+          height: 0px; 
+          background-color: rgb(81, 82, 83);
+        }
+        .counterops-banner {
+          display: flex; 
+          margin-top: 12px;
+          position: relative;                
+        }
+        .counterops-banner img {
+          width: 368px;
+        }
+        .ritsuko {
+          position: absolute;
+          top: -30px;
+          left: 280px;          
+        }
+        .ritsuko img {
+          width: 88px;
+        }
+        .JTF3-manga {
+          display: flex;
+          flex-direction: column;
+          width: 378px;    
+          justify-content: space-between;
+          align-self: center;     
+          align-items: center;  
+        }
+        .collection {
+          font-size: 15px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 12px;
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+        .comics {
+          color: rgb(0, 157, 255);
+          font-size: 15px;
+          font-weight: bold;
+          margin-bottom: 0px;
+        }
+        .JTF3-info {
+          display: flex;
+          flex-direction: column;
+          margin-top: 15px;  
+        }
+        .story {
+          width: 349px;
+          font-size: 12px;
+          line-height: 18px;        
+          margin-top: 0px;
+          margin-bottom: 0px; 
+        }
+        .credits {
+          display: flex;
+          flex-direction: row;
+          width: 228px;
+          justify-content: space-between;
+          margin-top: 25px;
+        }
+        .JTF3-books {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 465px; 
+          margin-top: 28px;            
+        } 
+        .JTF3-books img {
+          object-fit: cover;                
+          width: 328px;
+        }
+        .buybutton {
+          display: flex;
+          align-items: center;
+          justify-content: center;  
+          color: aliceblue;
+          background-color: #000000;
+          font-size: 15px;
+          font-weight: bold;
+          margin-top: 0px;
+          border-radius: 6px;
+          padding: 5px 10px;    
+        }       
+        .buybutton:hover {
+          background-color: #6b1212;
+          cursor: pointer;
+        }
+        .center-line {
+          display: flex; 
+          margin-top: 12px;
+          align-self: center;
+          width: 288px; 
+          height: 1px; 
+          background-color: rgb(81, 82, 83);
+        }
+        .review {
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+          width: 368px;
+          margin-top: 15px;
+          font-size: 12px;
+          line-height: 18px;
+          padding-right: 0px;
+          padding-left: 0px;   
+        }
+      }
+
 
     </style>
   </head>
   <body>
-    <div class="header">
+    <div class="header">      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <div class="headerbox">
         <div class="leftheader">
           <div>
@@ -276,11 +550,7 @@
             Counter Ops
           </span>
         </div>
-        <div style="
-          align-self: center;
-          width: 845px;
-          height: 1px;
-          background-color: rgb(81, 82, 83);">
+        <div class="line1">
         </div>                     
       </div> 
       <div class="jtf-3">
@@ -290,18 +560,9 @@
             <img src="elements/ritsuko.webp">
           </div>
         </div>
-        <div style="
-          font-size: 20px;
-          font-weight: bold;
-          text-align: center;
-          margin-top: 12px;
-          margin-left: 28px;">
+        <div class="collection">
           Complete Collection of the 
-            <span style="
-              color: rgb(0, 157, 255);
-              font-size: 28px;
-              font-weight: bold;
-              margin-bottom: 0px;">
+            <span class="comics">
               5 issue comic book 
             </span> 
             mini-series!
